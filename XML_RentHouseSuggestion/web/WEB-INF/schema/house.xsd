@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="thuyvtk.xsd"
+           xmlns="thuyvtk.xsd"
+           elementFormDefault="qualified">
+    <xs:element name="houses" type="listHouse"/>
+    <xs:complexType name="listHouse">
+        <xs:sequence>
+            <xs:element name="house" type="houseItem" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="houseItem">
+        <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="title" type="xs:string"/>
+                <xs:element name="linkNew" type="xs:string"/>
+                <xs:element name="timePost" type="xs:string"/>
+                <xs:element name="img" type="xs:string"/>
+                <xs:element name="rentAddress" type="xs:string"/>
+                <xs:element name="size" type="xs:string"/>
+                <xs:element name="toilet" type="xs:string"/>
+                <xs:element name="people" type="xs:string"/>
+                <xs:element name="electricPrice" type="xs:string"/>
+                <xs:element name="waterPrice" type="xs:string"/>
+                <xs:element name="bonus" type="xs:string"/>
+                <xs:element name="rentPrice" type="xs:integer"/>
+                <xs:element name="detail" type="xs:string"/>
+                <xs:element name="latitude" type="xs:decimal"/>
+                <xs:element name="longitude" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
