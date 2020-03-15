@@ -488,4 +488,30 @@ public class HouseItem {
         this.longitude = value;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+            
+        HouseItem item = (HouseItem)obj;
+        return title.equals(item.title) 
+                && title.equals(item.title)
+                && timePost.equals(item.timePost)
+                && img.equals(item.img)
+                && timePost.equals(item.timePost)
+                && rentAddress.equals(item.rentAddress)
+                && size.equals(item.size)
+                && toilet.equals(item.toilet)
+                && people.equals(item.people)
+                && electricPrice.equals(item.electricPrice)
+                && waterPrice.equals(item.waterPrice)
+                && bonus.equals(item.bonus)
+                && rentPrice.equals(item.rentPrice)
+                && detail.equals(item.detail);
+//                && latitude.equals(item.latitude)
+//                && longitude.equals(item.longitude);
+    }
+    
+    
+
 }

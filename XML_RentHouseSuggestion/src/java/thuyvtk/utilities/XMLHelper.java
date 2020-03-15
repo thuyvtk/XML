@@ -45,7 +45,7 @@ public class XMLHelper {
             for (int i = 0; i < houses.getHouse().size(); i++) {
                 HouseItem item = houses.getHouse().get(i);
                 HouseDAO houseDAO = new HouseDAO();
-                System.out.println(houseDAO.insertHouse(item));
+                System.out.println(houseDAO.insertHouse(item, i+1));
             }
         } catch (JAXBException ex) {
             Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, null, ex);
