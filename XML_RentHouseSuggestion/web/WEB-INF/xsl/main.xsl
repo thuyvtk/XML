@@ -14,7 +14,7 @@
     </xsl:template>
     
     
-    <!--template crawl thuenhatro360-->
+    <!--    template crawl thuenhatro360-->    
     <xsl:template match="t:house_thuenhatro360">
         <xsl:variable name="home" select="document(@link)"/> 
         <xsl:variable name="homeDomain" select="@link"/>
@@ -73,7 +73,7 @@
         <xsl:for-each select="$page//article//a[@class='advert_hoz_item_img']">
             <xsl:element name="house">
                 <xsl:element name="linkNew">
-                        <xsl:value-of select="concat($hostDomain,./@href)"/> 
+                    <xsl:value-of select="concat($hostDomain,./@href)"/> 
                 </xsl:element>
                 
                 <xsl:call-template name="GetDetailThueNhaTro360">
@@ -91,7 +91,7 @@
         </xsl:element>
         <xsl:element name="timePost">
             <xsl:call-template name="RemoveSpace">
-                <xsl:with-param name="string" select="$srcNew//p[i[@class='material-icons' and text()='access_time']]"/>
+                <xsl:with-param name="string" select="$srcNew//p[i[@class='material-icons' and text()='access_time']]/text()"/>
             </xsl:call-template>
         </xsl:element>
         <xsl:element name="img">
@@ -103,12 +103,12 @@
         <xsl:element name="size">
             <xsl:value-of select="$srcNew//*[i[@class='material-icons' and text()='photo_size_select_small']]/span/text()"/>
         </xsl:element>
-<!--        <xsl:element name="electricPrice">
+        <xsl:element name="electricPrice">
             <xsl:value-of select="$srcNew//*[span[ @class='btn info-label' and text() = 'Giá nước']]/a[@class='btn info-data']/text()"/>
         </xsl:element>
         <xsl:element name="waterPrice">
             <xsl:value-of select="$srcNew//*[span[ @class='btn info-label' and text() = 'Giá nước']]/a[not(@class='btn info-data')]/text()"/>
-        </xsl:element>-->
+        </xsl:element>
         <xsl:element name="bonus">
             <xsl:for-each select="$srcNew//div[@class='utilities']//div[@class='utility ']//p//text()">
                 <xsl:value-of select="concat(.,',')"/>
@@ -118,6 +118,13 @@
             <xsl:call-template name="RemoveSpace">
                 <xsl:with-param name="string" select="$srcNew//h2[amp-img[@src='https://thuenhatro360.com/images/money-bag.svg']]"/>
             </xsl:call-template>
+        </xsl:element>
+        <xsl:element name="detail">
+            <xsl:for-each select="$srcNew//div[@class='advert_detail']/div[br]/text()">
+                <xsl:if test="contains(.,'điện') or contains(.,'nước')">
+                    <xsl:value-of select="concat(.,' ')"/>
+                </xsl:if>
+            </xsl:for-each>
         </xsl:element>
         <xsl:element name="latitude">
             <xsl:call-template name="GetLatituteLongtitute">
@@ -150,46 +157,46 @@
         <xsl:value-of select="normalize-space($string)"/>
     </xsl:template>
     <!--Crawl phongtot-->
-<!--    <xsl:template match="t:house_phongtot">
+    <xsl:template match="t:house_phongtot">
         <xsl:variable name="listDoc" select="document(@link)"/> 
         <xsl:variable name="host" select="@link"/> 
         <xsl:variable name="room_page_1" select="document($listDoc//ul[@class='nav navbar-nav']//a[ text()='Phòng trọ']/@href)"/>
          
         <xsl:element name="page">
-                        <xsl:attribute name="page_number">1</xsl:attribute>
-        <xsl:attribute name="href">
-            <xsl:value-of select="$listDoc//ul[@class='nav navbar-nav']//a[ text()='Phòng trọ']/@href"/>
-        </xsl:attribute>
-        get list room in page 1
-        <xsl:for-each select="$room_page_1//div[@class='room-item']//div[@class='block-room-item-title']//a[contains(@href,'http')]"> 
-            <xsl:element name="house"> 
-                <xsl:element name="linkNew">
-                    <xsl:value-of select="./@href"/> 
-                </xsl:element>
-                <xsl:call-template name="GetRoomDetail">
-                    <xsl:with-param name="srcRoom" select="document(./@href)"/>
-                </xsl:call-template>
-            </xsl:element> 
-        </xsl:for-each>
+            <xsl:attribute name="page_number">1</xsl:attribute>
+            <xsl:attribute name="href">
+                <xsl:value-of select="$listDoc//ul[@class='nav navbar-nav']//a[ text()='Phòng trọ']/@href"/>
+            </xsl:attribute>
+            <!--get list room in page 1-->
+            <xsl:for-each select="$room_page_1//div[@class='room-item']//div[@class='block-room-item-title']//a[contains(@href,'http')]"> 
+                <xsl:element name="house"> 
+                    <xsl:element name="linkNew">
+                        <xsl:value-of select="./@href"/> 
+                    </xsl:element>
+                    <xsl:call-template name="GetRoomDetail">
+                        <xsl:with-param name="srcRoom" select="document(./@href)"/>
+                    </xsl:call-template>
+                </xsl:element> 
+            </xsl:for-each>
         </xsl:element>
             
-        get page 2-35
+        <!--get page 2-35-->
         <xsl:for-each select="$room_page_1//ul[@class='pagination']//a[not(@rel='next')]">
-            <xsl:if test="substring-after(./@href, '?page=') &lt; 9">
+            <xsl:if test="substring-after(./@href, '?page=') &lt; 3">
                 <xsl:call-template name="GetLinkPaging">
                     <xsl:with-param name="link" select="./@href"/>
                     <xsl:with-param name="src" select="document(./@href)"/>
                 </xsl:call-template>
-                <xsl:if test="substring-after(./@href, '?page=') = 8">
+                <!--                <xsl:if test="substring-after(./@href, '?page=') = 8">
                     <xsl:call-template name="GetListLinkNextPages">
                         <xsl:with-param name="page" select="substring-after(./@href, '?page=')"/>
                         <xsl:with-param name="linkCurrentPage" select="document(./@href)"/>
                     </xsl:call-template>
-                </xsl:if>
+                </xsl:if>-->
             </xsl:if>
         </xsl:for-each>
         
-    </xsl:template> -->
+    </xsl:template> 
     
     <xsl:template name="GetListLinkNextPages">
         <xsl:param name="page" select="1"/>
@@ -219,14 +226,6 @@
         <xsl:variable name="pageNumber" select="substring-after($link, '?page=')"/>
         <!--<xsl:if test="$pageNumber &lt; 36">-->
         <xsl:if test="$pageNumber &lt; 9">
-            <!--<xsl:element name="page">-->
-            <!--            <xsl:attribute name="page_number">
-                <xsl:value-of select="$pageNumber"/>
-            </xsl:attribute>
-            <xsl:attribute name="href">
-            <xsl:value-of select="$link"/>
-            </xsl:attribute>-->
-            
             <xsl:for-each select="$src//div[@class='room-item']//div[@class='block-room-item-title']//a[contains(@href,'http')]"> 
                 <xsl:element name="house"> 
                     <xsl:element name="linkNew">
@@ -260,12 +259,6 @@
         <xsl:element name="size">
             <xsl:value-of select="$srcRoom//div[@class='main-info']//div[@class='size']/a[@class='btn info-data']/text()"/>
         </xsl:element>
-        <xsl:element name="toilet">
-            <xsl:value-of select="$srcRoom//div[@class='main-info']//div[@class='vs']/a[@class='btn info-data']/text()"/>
-        </xsl:element>
-        <xsl:element name="people">
-            <xsl:value-of select="$srcRoom//div[@class='main-info']//div[@class='vs']/a[not(@class='btn info-data')]/text()"/>
-        </xsl:element>
         <xsl:element name="electricPrice">
             <xsl:value-of select="$srcRoom//*[span[ @class='btn info-label' and text() = 'Giá nước']]/a[@class='btn info-data']/text()"/>
         </xsl:element>
@@ -279,7 +272,9 @@
             <xsl:value-of select="$srcRoom//div[@class='info-price']/a/text()"/>
         </xsl:element>
         <xsl:element name="detail">
-            <xsl:value-of select="$srcRoom//div[@class='dis-content']"/>
+            <xsl:if test="contains($srcRoom//div[@class='dis-content'],'điện') or contains($srcRoom//div[@class='dis-content'],'nước')">
+                <xsl:value-of select="$srcRoom//div[@class='dis-content']"/>
+            </xsl:if>
         </xsl:element>
     </xsl:template><!--get detail rent house new-->
     
