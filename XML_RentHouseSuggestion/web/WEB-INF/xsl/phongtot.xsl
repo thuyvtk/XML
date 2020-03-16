@@ -77,7 +77,7 @@
                 </xsl:element>
                 
                 <xsl:call-template name="GetDetailThueNhaTro360">
-                    <xsl:with-param name="$srcRoom" select="document(./@href)"/>
+                    <xsl:with-param name="srcNew" select="document(concat($hostDomain,./@href))"/>
                 </xsl:call-template>
                 
             </xsl:element>
@@ -85,20 +85,20 @@
     </xsl:template>
     <!--crawl detail new-->
     <xsl:template name="GetDetailThueNhaTro360">
-        <xsl:param name="$srcRoom"/>
+        <xsl:param name="srcNew"/>
         <xsl:element name="title">
-            <xsl:value-of select="$srcRoom//div[@class='advert_detail']//h1/text()"/>
+            <xsl:value-of select="$srcNew//div[@class='advert_detail']//h1/text()"/>
         </xsl:element>
         <xsl:element name="img">
-            <xsl:value-of select="$srcRoom//div[@class='advert_detail']/amp-carousel/@src"/>
+            <xsl:value-of select="$srcNew//div[@class='advert_detail']/amp-carousel/@src"/>
         </xsl:element>
         <xsl:element name="rentAddress">
-            <xsl:value-of select="$srcRoom//p[i[@class='material-icons' and text()='location_on']]/text()"/>
+            <xsl:value-of select="$srcNew//p[i[@class='material-icons' and text()='location_on']]/text()"/>
         </xsl:element>
         <xsl:element name="size">
-            <xsl:value-of select="$srcRoom//*[i[@class='material-icons' and text()='photo_size_select_small']]/span/text()"/>
+            <xsl:value-of select="$srcNew//*[i[@class='material-icons' and text()='photo_size_select_small']]/span/text()"/>
         </xsl:element>
-        <xsl:element name="electricPrice">
+<!--        <xsl:element name="electricPrice">
             <xsl:value-of select="$srcRoom//*[span[ @class='btn info-label' and text() = 'Giá nước']]/a[@class='btn info-data']/text()"/>
         </xsl:element>
         <xsl:element name="waterPrice">
@@ -112,7 +112,7 @@
         </xsl:element>
         <xsl:element name="detail">
             <xsl:value-of select="$srcRoom//div[@class='dis-content']"/>
-        </xsl:element>
+        </xsl:element>-->
     </xsl:template><!--get detail rent house new-->
     
     <!--Crawl phongtot-->
