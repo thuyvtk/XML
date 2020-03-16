@@ -12,9 +12,9 @@ package thuyvtk.common;
 public class Constraint {
 
     //phongtot
-    public static final String PHONGTOT_XML_CONFIG = "WEB-INF/xml/phongtot.xml";
-    public static final String PHONGTOT_XML_OUTPUT = "WEB-INF/xml/phongtot_output.xml";
-    public static final String PHONGTOT_XSLT = "WEB-INF/xsl/phongtot.xsl";
+    public static final String PHONGTOT_XML_CONFIG = "WEB-INF/xml/domain.xml";
+    public static final String PHONGTOT_XML_OUTPUT = "WEB-INF/xml/crawl_output.xml";
+    public static final String PHONGTOT_XSLT = "WEB-INF/xsl/main.xsl";
 
     //jaxB
     public static final String JAXB_GENERATE_PACKAGE = "WEB-INF/classes/thuyvtk/jaxB";
