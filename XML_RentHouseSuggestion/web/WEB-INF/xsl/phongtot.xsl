@@ -39,7 +39,7 @@
             <xsl:with-param name="hostDomain" select="$host"/>
         </xsl:call-template>
         
-        <xsl:for-each select="$firstPage//div[@class='paginate-items']//li//a[not(@rel='next') and not(rel='prev') and text()&lt;9]">
+        <xsl:for-each select="$firstPage//div[@class='paginate-items']//li//a[not(@rel='next') and not(rel='prev') and text()&lt;1]">
             <xsl:call-template name="CrawlHouseThueNhaTro360">
                 <xsl:with-param name="page" select="document(./@href)"/>
                 <xsl:with-param name="hostDomain" select="$host"/>
@@ -89,6 +89,11 @@
         <xsl:element name="title">
             <xsl:value-of select="$srcNew//div[@class='advert_detail']//h1/text()"/>
         </xsl:element>
+        <xsl:element name="timePost">
+            <xsl:call-template name="RemoveSpace">
+                <xsl:with-param name="string" select="$srcNew//p[i[@class='material-icons' and text()='access_time']]"/>
+            </xsl:call-template>
+        </xsl:element>
         <xsl:element name="img">
             <xsl:value-of select="$srcNew//div[@class='advert_detail']/amp-carousel/@src"/>
         </xsl:element>
@@ -99,22 +104,51 @@
             <xsl:value-of select="$srcNew//*[i[@class='material-icons' and text()='photo_size_select_small']]/span/text()"/>
         </xsl:element>
 <!--        <xsl:element name="electricPrice">
-            <xsl:value-of select="$srcRoom//*[span[ @class='btn info-label' and text() = 'Giá nước']]/a[@class='btn info-data']/text()"/>
+            <xsl:value-of select="$srcNew//*[span[ @class='btn info-label' and text() = 'Giá nước']]/a[@class='btn info-data']/text()"/>
         </xsl:element>
         <xsl:element name="waterPrice">
-            <xsl:value-of select="$srcRoom//*[span[ @class='btn info-label' and text() = 'Giá nước']]/a[not(@class='btn info-data')]/text()"/>
-        </xsl:element>
+            <xsl:value-of select="$srcNew//*[span[ @class='btn info-label' and text() = 'Giá nước']]/a[not(@class='btn info-data')]/text()"/>
+        </xsl:element>-->
         <xsl:element name="bonus">
-            <xsl:value-of select="$srcRoom//*[span[ @class='btn info-label' and text() = 'Tiện ích']]/a"/>
+            <xsl:for-each select="$srcNew//div[@class='utilities']//div[@class='utility ']//p//text()">
+                <xsl:value-of select="concat(.,',')"/>
+            </xsl:for-each>
         </xsl:element>
         <xsl:element name="rentPrice">
-            <xsl:value-of select="$srcRoom//div[@class='info-price']/a/text()"/>
+            <xsl:call-template name="RemoveSpace">
+                <xsl:with-param name="string" select="$srcNew//h2[amp-img[@src='https://thuenhatro360.com/images/money-bag.svg']]"/>
+            </xsl:call-template>
         </xsl:element>
-        <xsl:element name="detail">
-            <xsl:value-of select="$srcRoom//div[@class='dis-content']"/>
-        </xsl:element>-->
+        <xsl:element name="latitude">
+            <xsl:call-template name="GetLatituteLongtitute">
+                <xsl:with-param name="string" select="$srcNew//amp-iframe[contains(@src,'https://www.google.com/maps/embed')]/@src"/>
+                <xsl:with-param name="return" select="'latitude'"/>
+            </xsl:call-template>
+        </xsl:element>
+        <xsl:element name="longitude">
+            <xsl:call-template name="GetLatituteLongtitute">
+                <xsl:with-param name="string" select="$srcNew//amp-iframe[contains(@src,'https://www.google.com/maps/embed')]/@src"/>
+                <xsl:with-param name="return" select="'longitude'"/>
+            </xsl:call-template>
+        </xsl:element>
     </xsl:template><!--get detail rent house new-->
     
+    <xsl:template name="GetLatituteLongtitute">
+        <xsl:param name="string"/>
+        <xsl:param name="return"/>
+        
+        <xsl:if test="$return='latitude'">
+            <xsl:value-of select="substring-before(substring-before(substring-after($string,'AIzaSyAV5VZKtqt2jNk1ZBBOL9bFDGC1XWAmFroq='),'zoom=15'),',')"/>
+        </xsl:if>
+        <xsl:if test="$return='longitude'">
+            <xsl:value-of select="substring-after(substring-before(substring-after($string,'AIzaSyAV5VZKtqt2jNk1ZBBOL9bFDGC1XWAmFroq='),'zoom=15'),',')"/>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template name="RemoveSpace">
+        <xsl:param name="string"/>
+        <xsl:value-of select="normalize-space($string)"/>
+    </xsl:template>
     <!--Crawl phongtot-->
 <!--    <xsl:template match="t:house_phongtot">
         <xsl:variable name="listDoc" select="document(@link)"/> 
