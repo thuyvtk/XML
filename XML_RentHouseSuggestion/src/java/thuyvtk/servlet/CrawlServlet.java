@@ -55,7 +55,7 @@ public class CrawlServlet extends HttpServlet {
                 StreamResult streamResult = new StreamResult(new FileOutputStream(realPath + Constraint.PHONGTOT_XML_OUTPUT));
                 transformer.transform(new DOMSource(dom.getNode()), streamResult);
                 
-                XMLHelper.JAXBUnmarshallingHouse(realPath + Constraint.PHONGTOT_XML_OUTPUT);
+//                XMLHelper.JAXBUnmarshallingHouse(realPath + Constraint.PHONGTOT_XML_OUTPUT);
                 
             } catch (FileNotFoundException | TransformerException ex) {
                 Logger.getLogger(CrawlServlet.class.getName()).log(Level.SEVERE, "CrawlServler:", ex.getMessage());

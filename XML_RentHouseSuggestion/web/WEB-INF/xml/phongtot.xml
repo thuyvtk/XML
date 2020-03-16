@@ -7,5 +7,11 @@ and open the template in the editor.
 
 
 <!--<house_phongtot link="http://phongtot.vn/phong-tro-nha-tro/" xmlns="thuyvtk.xsd">-->
-<house_phongtot link="http://phongtot.vn/" xmlns="thuyvtk.xsd">
-</house_phongtot>
+<domain>
+    <house_thuenhatro360 link="https://thuenhatro360.com" xmlns="thuyvtk.xsd">
+    </house_thuenhatro360>
+    <house_phongtot link="http://phongtot.vn" xmlns="thuyvtk.xsd">
+    </house_phongtot>
+</domain>
+
+

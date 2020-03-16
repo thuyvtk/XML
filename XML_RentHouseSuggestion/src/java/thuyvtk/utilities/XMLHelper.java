@@ -43,17 +43,18 @@ public class XMLHelper {
             File file = new File(xmlFile);
             ListHouse houses = (ListHouse) unmarshaller.unmarshal(file);
             for (int i = 0; i < houses.getHouse().size(); i++) {
-                HouseItem item = houses.getHouse().get(i);
-                HouseDAO houseDAO = new HouseDAO();
-                System.out.println(houseDAO.insertHouse(item, i+1));
+//                HouseItem item = houses.getHouse().get(i);
+                System.out.println(i);
+//                HouseDAO houseDAO = new HouseDAO();
+//                System.out.println(houseDAO.insertHouse(item, i+1));
             }
         } catch (JAXBException ex) {
             Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NamingException ex) {
-            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } //catch (SQLException ex) {
+//            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (NamingException ex) {
+//            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         
         } 
 }

@@ -29,8 +29,8 @@ public class HouseDAO implements Serializable{
             if (con != null) {
                 float latitude = 0;
                 float longitude = 0;
-                latitude = dto.getLatitude().floatValue();
-                longitude = dto.getLongitude().floatValue();
+//                latitude = dto.getLatitude().floatValue();
+//                longitude = dto.getLongitude().floatValue();
                 String sql = "INSERT INTO tblHouse(title,"
                         + "linkNew,"
                         + "timePost,"
