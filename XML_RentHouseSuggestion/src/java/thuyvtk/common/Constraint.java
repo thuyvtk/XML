@@ -20,6 +20,8 @@ public class Constraint {
     public static final String JAXB_GENERATE_PACKAGE = "WEB-INF/classes/thuyvtk/jaxB";
 
     //schema
-    public static final String HOUSE_SCHEMA= "WEB-INF/schema/house.xsd";
+    public static final String HOUSE_SCHEMA = "WEB-INF/schema/house.xsd";
 
+    //geocode request
+    public static final String GEOCODE_API = "https://geocode.xyz/";
 }

@@ -30,7 +30,7 @@ and open the template in the editor.
                 <xs:element name="electricPrice" type="xs:string"/>
                 <xs:element name="waterPrice" type="xs:string"/>
                 <xs:element name="bonus" type="xs:string"/>
-                <xs:element name="rentPrice" type="xs:integer"/>
+                <xs:element name="rentPrice" type="xs:string"/>
                 <xs:element name="detail" type="xs:string"/>
                 <xs:element name="latitude" type="xs:decimal"/>
                 <xs:element name="longitude" type="xs:decimal"/>
