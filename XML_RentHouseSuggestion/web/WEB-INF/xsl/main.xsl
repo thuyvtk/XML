@@ -162,11 +162,6 @@
         <xsl:variable name="host" select="@link"/> 
         <xsl:variable name="room_page_1" select="document($listDoc//ul[@class='nav navbar-nav']//a[ text()='Phòng trọ']/@href)"/>
          
-        <xsl:element name="page">
-            <xsl:attribute name="page_number">1</xsl:attribute>
-            <xsl:attribute name="href">
-                <xsl:value-of select="$listDoc//ul[@class='nav navbar-nav']//a[ text()='Phòng trọ']/@href"/>
-            </xsl:attribute>
             <!--get list room in page 1-->
             <xsl:for-each select="$room_page_1//div[@class='room-item']//div[@class='block-room-item-title']//a[contains(@href,'http')]"> 
                 <xsl:element name="house"> 
@@ -178,7 +173,6 @@
                     </xsl:call-template>
                 </xsl:element> 
             </xsl:for-each>
-        </xsl:element>
             
         <!--get page 2-35-->
         <xsl:for-each select="$room_page_1//ul[@class='pagination']//a[not(@rel='next')]">
