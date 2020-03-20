@@ -3,10 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package thuyvtk.controller;
+package thuyvtk.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,13 +18,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ASUS
  */
-public class ProcessServlet extends HttpServlet {
-    
-//    private final String INDEX_PAGE = "adminPage.jsp";
-    private final String INDEX_PAGE = "admin.jsp";
-    private final String CRAWL = "CrawlServlet";
-    private final String CRAWL_BACHHOAXANH_SERVLET = "CrawlBachhoaxanhServlet";
-
+@WebServlet(name = "CrawlBachhoaxanhServlet", urlPatterns = {"/CrawlBachhoaxanhServlet"})
+public class CrawlBachhoaxanhServlet extends HttpServlet {
+    private final String ADMIN = "adminPage.html";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -34,22 +33,13 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = INDEX_PAGE;
+        PrintWriter out = response.getWriter();
+        String url = ADMIN;
         try {
-            String action = request.getParameter("action");
-            if (action == null || action.equals("")) {
-            } else {
-                switch (action) {
-                    case "CẬP NHẬT DỮ LIỆU":
-                        url = CRAWL;
-                        break;
-                    case "bachhoaxanh":
-                        url = CRAWL_BACHHOAXANH_SERVLET;
-                        break;
-                }
-            }
+            
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
+            out.close();
         }
     }
 

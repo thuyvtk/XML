@@ -1,0 +1,149 @@
+body{
+    background-color: rgba(235, 242, 249, 0.5) ;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    float: top;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 65%;
+    align-items: center;
+    display: flex;
+    border: 2.5px solid #f0f5f5;
+    border-top: none;
+}
+.wellcome {
+    width: 18%;
+    text-align: right;
+    padding-right: 40px;
+    font-size: 17px;
+    font-family: inherit;
+    float: left;
+    text-align: right;
+}
+.btnLogin{
+    width: 100px;
+    height: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #99ccff;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #99ccff;
+    background: none;
+    box-shadow: 1.5px 3px #cce6ff;
+    float: right;
+    cursor: pointer;
+}
+
+.content{
+    width: 100%;
+    height: 470px;
+    float: bottom;
+    margin-top: 70px;
+}
+.crawlAction{
+    width: 30%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 1.25);
+    border-radius: 10px;
+    border: 4px solid rgb(240, 245, 245);
+    float: left;
+    margin-left: 5%;
+}
+.crawlNews{
+    float: top;
+    width: 80%;
+    height: 70px;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 15px;
+    /*color: #bfbfbf;*/
+}
+.crawlBonus{
+    float: top;
+    width: 80%;
+    height: 200px;
+    border-bottom: 1px solid #000000;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.title{
+    float: top;
+    width: 90%;
+    height: 40px;
+    border-bottom: 1px solid #f2f2f2;
+    margin-left: 3%;
+    align-items:center;
+    font-family: inherit;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 19px;
+    color: #4d4d4d;
+    font-style: italic;
+    margin-top: 10px;
+}
+.btnUpdate{
+    width: 100%;
+    height: 40px;
+    margin-top: 7px;
+    background: url("icon_house.png") no-repeat #002266 90%;
+    background-size: 25px 25px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.bachhoaxanh{
+    width: 70px;
+    height: 70px;
+    /*border: 1px solid #000000;*/
+    border-radius: 40%;
+    margin-top: 7px;
+    background: url("logo_bachhoaxanh.png") no-repeat center;
+    background-size: 65px 65px;
+    float: left;
+    cursor: pointer;
+    border: none;
+    font-size: 0;
+}
+.coopmart{
+    width: 70px;
+    height: 70px;
+    border-radius: 40%;
+    margin-top: 7px;
+    background: url("logo_coopmart.png") no-repeat center;
+    background-size: 65px 65px;
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.school{
+    width: 70px;
+    height: 70px;
+    border-radius: 40%;
+    margin-top: 7px;
+    background: url("logo_school.png") no-repeat center;
+    background-size: 65px 65px;
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.admin{
+    margin-left: 5%;
+}
+.btnUserPage{
+    margin-top: -20px;
+}
+.bonus{
+    width: 55%;
+    background-color: rgba(255, 255, 255, 1.25);
+    border-radius: 10px;
+    border: 4px solid rgb(240, 245, 245);
+    float: right;
+    height: 90%;
+    margin-right: 5%;
+}
