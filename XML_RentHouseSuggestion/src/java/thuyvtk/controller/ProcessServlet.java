@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ProcessServlet extends HttpServlet {
     
-    private final String INDEX_PAGE = "adminPage.html";
+    private final String INDEX_PAGE = "adminPage.jsp";
     private final String CRAWL = "CrawlServlet";
 
     /**

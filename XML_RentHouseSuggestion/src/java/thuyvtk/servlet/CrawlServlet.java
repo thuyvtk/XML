@@ -8,8 +8,10 @@ package thuyvtk.servlet;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +33,9 @@ import thuyvtk.utilities.XMLHelper;
  */
 @WebServlet(name = "CrawlServlet", urlPatterns = {"/CrawlServlet"})
 public class CrawlServlet extends HttpServlet {
+
     private final String ADMIN = "adminPage.html";
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -44,24 +48,28 @@ public class CrawlServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
-            String url = ADMIN;
-            try {
-                String realPath = request.getServletContext().getRealPath("/");
-                DOMResult dom = Crawler.returnXMLResult(realPath + Constraint.PHONGTOT_XML_CONFIG ,realPath + Constraint.PHONGTOT_XSLT);
-                
-                TransformerFactory factory = TransformerFactory.newInstance();
-                Transformer transformer = factory.newTransformer();
-                StreamResult streamResult = new StreamResult(new FileOutputStream(realPath + Constraint.PHONGTOT_XML_OUTPUT));
-                transformer.transform(new DOMSource(dom.getNode()), streamResult);
-                XMLHelper xmlHelper = new XMLHelper();
-                xmlHelper.JAXBUnmarshallingHouse(realPath + Constraint.PHONGTOT_XML_OUTPUT);
-                
-            } catch (FileNotFoundException | TransformerException ex) {
-                Logger.getLogger(CrawlServlet.class.getName()).log(Level.SEVERE, "CrawlServler:", ex.getMessage());
-            } finally {
-                request.getRequestDispatcher(url).forward(request, response);
-            }
+
+        String url = ADMIN;
+        try {
+            String realPath = request.getServletContext().getRealPath("/");
+            DOMResult dom = Crawler.returnXMLResult(realPath + Constraint.PHONGTOT_XML_CONFIG, realPath + Constraint.PHONGTOT_XSLT);
+
+            TransformerFactory factory = TransformerFactory.newInstance();
+            Transformer transformer = factory.newTransformer();
+            StreamResult streamResult = new StreamResult(new FileOutputStream(realPath + Constraint.PHONGTOT_XML_OUTPUT));
+            transformer.transform(new DOMSource(dom.getNode()), streamResult);
+            XMLHelper xmlHelper = new XMLHelper();
+            xmlHelper.JAXBUnmarshallingHouse(realPath + Constraint.PHONGTOT_XML_OUTPUT);
+
+        } catch (FileNotFoundException | TransformerException ex) {
+            Logger.getLogger(CrawlServlet.class.getName()).log(Level.SEVERE, "CrawlServler:", ex.getMessage());
+        } catch (NamingException ex) {
+            Logger.getLogger(CrawlServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(CrawlServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            request.getRequestDispatcher(url).forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -132,12 +132,19 @@
                 <xsl:with-param name="return" select="'latitude'"/>
             </xsl:call-template>
         </xsl:element>
+        <xsl:element name="website">
+            <xsl:value-of select="'THUE_NHA_TRO_360'"/>
+        </xsl:element>
         <xsl:element name="longitude">
             <xsl:call-template name="GetLatituteLongtitute">
                 <xsl:with-param name="string" select="$srcNew//amp-iframe[contains(@src,'https://www.google.com/maps/embed')]/@src"/>
                 <xsl:with-param name="return" select="'longitude'"/>
             </xsl:call-template>
         </xsl:element>
+        <xsl:element name="website">
+            <xsl:value-of select="'THUE_NHA_TRO_360'"/>
+        </xsl:element>
+        
     </xsl:template><!--get detail rent house new-->
     
     <xsl:template name="GetLatituteLongtitute">
@@ -167,6 +174,9 @@
                 <xsl:element name="house"> 
                     <xsl:element name="linkNew">
                         <xsl:value-of select="./@href"/> 
+                    </xsl:element>
+                    <xsl:element name="timePost">
+                        <xsl:value-of select="$room_page_1//*[div[@class='block-room-item-title' and a[@href=./@href]]]//div[@class='pull-right item-info-date']/a/text()"/> 
                     </xsl:element>
                     <xsl:call-template name="GetRoomDetail">
                         <xsl:with-param name="srcRoom" select="document(./@href)"/>
@@ -225,6 +235,10 @@
                     <xsl:element name="linkNew">
                         <xsl:value-of select="./@href"/> 
                     </xsl:element>
+                    
+                    <xsl:element name="timePost">
+                        <xsl:value-of select="$src//*[div[@class='block-room-item-title' and a[@href=./@href]]]//div[@class='pull-right item-info-date']/a/text()"/> 
+                    </xsl:element>
                         
                     <xsl:call-template name="GetRoomDetail">
                         <xsl:with-param name="srcRoom" select="document(./@href)"/>
@@ -269,6 +283,11 @@
             <xsl:if test="contains($srcRoom//div[@class='dis-content'],'điện') or contains($srcRoom//div[@class='dis-content'],'nước')">
                 <xsl:value-of select="$srcRoom//div[@class='dis-content']"/>
             </xsl:if>
+        </xsl:element>
+        <xsl:element name="latitude"/>
+        <xsl:element name="longitude"/>
+        <xsl:element name="website">
+            <xsl:value-of select="'PHONG_TOT'"/>
         </xsl:element>
     </xsl:template><!--get detail rent house new-->
     

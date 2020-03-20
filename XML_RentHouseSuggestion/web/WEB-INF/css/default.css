@@ -1,0 +1,143 @@
+.header_container{
+    width: 100%;
+    height: 70px;
+    background-color: #000000;
+    top:0;
+    left: 0;
+    position: fixed;
+    display: flex;
+}
+.logo{
+    width: 100px;
+    background-image: url("homeSu.png");
+    background-position: center;
+    background-size: cover;
+    margin-right: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.line{
+    width: 80%;
+    border-left: 1px solid #333333;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: serif;
+    size: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.login{
+    height: 30px;
+    width: 30px;
+    background: url("icon_account.png") no-repeat #000000 center;
+    background-size: cover;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#login_space{
+    background-color: rgba(0, 0, 0, 0.75); 
+    border-radius: 25px;
+    width: 40%;
+    height: 80%;
+    margin-left: 30%;
+    margin-top: 5%;
+    position: absolute;
+}
+#txtSignIn{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.love_list{
+    height: 30px;
+    width: 30px;
+    background-image: url("icon_love_list_1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.search_container{
+    width: 100%;
+    height: 580px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("thumail_background_3.png");
+    /*background-image: url("thumail_background_5.png");*/
+    margin-top: 70px;
+    left: 0;
+    top:0;
+    position: absolute;
+}
+#search_space{
+    background-color: rgba(0, 0, 0, 0.65); 
+    border-radius: 25px;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    position: absolute;
+}
+#search_bar{
+    width: 66%;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 1); 
+    margin-left: 7.8%;
+    margin-top: 50px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 20px;
+
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+}
+.controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+#btn_Search{
+    width: 130px;
+    height: 45px;
+    background: url("icon_search.png") no-repeat #ff9900 left;
+    background-size: 30px 30px;
+    margin-left: 30px;
+    padding-left: 10px;
+    left: 40px;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: initial;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*#map {
+    height: 1px;
+}*/
+#btn_MoreOption{
+    width: 180px;
+    position: absolute;
+    right: 9%;
+    bottom: 85px;
+    border: none;
+    background-size: 20px 20px;
+    color: #ffffff;
+    size: 20px;
+    font-weight: bold;
+    font-style: initial;
+    cursor: pointer;
+}
+

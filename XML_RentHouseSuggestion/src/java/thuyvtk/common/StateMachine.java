@@ -38,7 +38,7 @@ public class StateMachine {
     }
     
     public static String convertEntities(String source){
-        source = source.replace("ocirc;", "&#244;").replace("&amp;", "").replace("agrave;", "&#224;").replace("Agrave;", "&#192;").replace("ograve;", "&#242;").replace("Ograve;", "	&#210;")
+        source = source.replace("ocirc;", "&#244;").replace("&amp;", "").replace("agrave;", "&#224;").replace("Agrave;", "&#192;").replace("ograve;", "&#242;").replace("Ograve;", "&#210;")
                 .replace("ndash;", "&#8211;").replace("ecirc;", "&#234;").replace("Ecirc;", "&#202;").replace("Acirc;", "&#194;")
                 .replace("acirc;", "&#226;").replace("Atilde;", "&#195;").replace("atilde;", "&#227;").replace("Otilde;", "&#213;").replace("otilde;", "&#245;")
                 .replace("Aacute;", "&#193;").replace("aacute;", "&#225;").replace("eacute;", "&#233;").replace("Eacute;", "&#201;").replace("uacute;", "&#250;").replace("Uacute;", "&#218;")
