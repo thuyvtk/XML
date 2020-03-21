@@ -3,27 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package thuyvtk.controller;
+package thuyvtk.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import thuyvtk.dao.HouseDAO;
+import thuyvtk.jaxbObject.HouseItem;
 
 /**
  *
  * @author ASUS
  */
-public class ProcessServlet extends HttpServlet {
-    
-//    private final String INDEX_PAGE = "admin.jsp";
+@WebServlet(name = "SearchServlet", urlPatterns = {"/SearchServlet"})
+public class SearchServlet extends HttpServlet {
+
     private final String INDEX_PAGE = "indexSearch.jsp";
-//    private final String INDEX_PAGE = "home.jsp";
-    private final String CRAWL = "CrawlServlet";
-    private final String CRAWL_BACHHOAXANH_SERVLET = "CrawlBachhoaxanhServlet";
-    private final String CRAWL_MARKET_SERVLET = "CrawlMarkethServlet";
-    private final String SEARCH_SERVLET = "SearchServlet";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,29 +42,38 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
         String url = INDEX_PAGE;
         try {
-            String action = request.getParameter("action");
-//            action = URLEncoder.encode(action, "UTF-8");
-            if (action == null || action.equals("")) {
-            } else {
-                switch (action) {
-                    case "crawl":
-                        url = CRAWL;
-                        break;
-                    case "bachhoaxanh":
-                        url = CRAWL_BACHHOAXANH_SERVLET;
-                        break;
-                    case "market":
-                        url = CRAWL_MARKET_SERVLET;
-                        break;
-                    case "Search":
-                        url = SEARCH_SERVLET;
-                        break;
-                }
+            String latitude = request.getParameter("latitude");
+            String longitude = request.getParameter("longitude");
+            HouseDAO houseDAO = new HouseDAO();
+            houseDAO.findHouses(latitude, longitude, 10);
+            
+            List<HouseItem> listHouses = houseDAO.getListHouses();
+            request.setAttribute("LIST_HOUSE", listHouses);
+            
+            List<HouseItem> top4 = new ArrayList<>();
+            for (int i = 0; i < 4; i++) {
+                top4.add(listHouses.get(i));
             }
-        } finally {
+            System.out.println(top4.size());
+            request.setAttribute("TOP4", top4);
+            
+//            for (HouseItem item : houseDAO.getListHouses()) {
+//                
+//                System.out.println(item.getTitle());
+//            }
+            System.out.println(latitude +"-"+longitude);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(SearchServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(SearchServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NamingException ex) {
+            Logger.getLogger(SearchServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }finally {
             request.getRequestDispatcher(url).forward(request, response);
+            out.close();
         }
     }
 

@@ -12,6 +12,8 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.naming.NamingException;
 import thuyvtk.jaxbObject.HouseItem;
 import thuyvtk.utilities.DBConnection;
@@ -22,6 +24,11 @@ import thuyvtk.utilities.DBConnection;
  * @author ASUS
  */
 public class HouseDAO implements Serializable{
+    public List<HouseItem> listHouses;
+
+    public List<HouseItem> getListHouses() {
+        return listHouses;
+    }
     
     public boolean insertHouse(HouseItem dto) throws SQLException, NamingException {
         Connection con = null;
@@ -172,6 +179,62 @@ public class HouseDAO implements Serializable{
         return false;
     }
     
-    
+     public void findHouses(String latitude, String longitude, float distance) throws ClassNotFoundException, SQLException, NamingException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBConnection.makeConnection();
+            if (con != null) {
+                String sql = "SELECT id,title,linkNew,timePost,img,rentAddress,size,electricPrice,waterPrice,bonus,"
+                            + "rentPrice,detail,latitude,longitude,webId," 
+                            +"( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) + sin( radians(?) ) * sin( radians( latitude ) ) ) ) "
+                            + "as 'distance' FROM tblHouse "
+                            + "WHERE ( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) + sin( radians(?) ) * sin( radians( latitude ) ) ) ) < ? "
+                            + "order by distance";
+                stm = con.prepareStatement(sql);
+                stm.setFloat(1, Float.parseFloat(latitude));
+                stm.setFloat(2, Float.parseFloat(longitude));
+                stm.setFloat(3, Float.parseFloat(latitude));
+                stm.setFloat(4, Float.parseFloat(latitude));
+                stm.setFloat(5, Float.parseFloat(longitude));
+                stm.setFloat(6, Float.parseFloat(latitude));
+                stm.setFloat(7, distance);
+                rs = stm.executeQuery();
+                while (rs.next()) {
+                    HouseItem houseItem = new HouseItem();
+                    houseItem.setId(BigInteger.valueOf(rs.getInt("id")));
+                    houseItem.setTitle(rs.getString("title"));
+                    houseItem.setLinkNew(rs.getString("linkNew"));
+                    houseItem.setTimePost(rs.getDate("timePost")+"");
+                    houseItem.setImg(rs.getString("img"));
+                    houseItem.setRentAddress(rs.getString("rentAddress"));
+                    houseItem.setSize(rs.getString("size"));
+                    houseItem.setElectricPrice(rs.getString("electricPrice"));
+                    houseItem.setWaterPrice(rs.getString("waterPrice"));
+                    houseItem.setBonus(rs.getString("bonus"));
+                    houseItem.setRentPrice(rs.getString("rentPrice"));
+                    houseItem.setDetail(rs.getString("detail"));
+                    houseItem.setLatitude(rs.getFloat("latitude")+"");
+                    houseItem.setLongitude(rs.getFloat("longitude")+"");
+                    houseItem.setWebsite(rs.getString("webId"));
+                    if (listHouses == null) {
+                        listHouses = new ArrayList<>();
+                    }
+                    listHouses.add(houseItem);
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+    }
     
 }

@@ -209,5 +209,7 @@ function create_address_infos(address) {
         choume: "",
         banchi: "",
         gou: ""
-    }
+    };
+    document.getElementById("latitude_param").value = address.geometry.location.lat();
+    document.getElementById("longitude_param").value = address.geometry.location.lng();
 }

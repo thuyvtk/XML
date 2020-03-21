@@ -5,12 +5,10 @@
  */
 package thuyvtk.servlet;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import static java.util.Collections.list;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.NamingException;
@@ -25,7 +23,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import jdk.nashorn.internal.parser.JSONParser;
 import org.json.JSONException;
 import thuyvtk.common.Constraint;
 import thuyvtk.common.GenericsType;
