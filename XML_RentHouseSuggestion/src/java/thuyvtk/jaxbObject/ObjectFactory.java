@@ -32,6 +32,7 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _Houses_QNAME = new QName("thuyvtk.xsd", "houses");
+    private final static QName _Markets_QNAME = new QName("thuyvtk.xsd", "markets");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: thuyvtk.jaxbObject
@@ -63,6 +64,31 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "thuyvtk.xsd", name = "houses")
     public JAXBElement<ListHouse> createHouses(ListHouse value) {
         return new JAXBElement<ListHouse>(_Houses_QNAME, ListHouse.class, null, value);
+    }
+    
+    /**
+     * Create an instance of {@link ListMarkets }
+     * 
+     */
+    public ListMarkets createListMarkets() {
+        return new ListMarkets();
+    }
+
+    /**
+     * Create an instance of {@link MarketItem }
+     * 
+     */
+    public MarketItem createMarketItem() {
+        return new MarketItem();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListMarkets }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "thuyvtk.xsd", name = "markets")
+    public JAXBElement<ListMarkets> createMarkets(ListMarkets value) {
+        return new JAXBElement<ListMarkets>(_Markets_QNAME, ListMarkets.class, null, value);
     }
 
 }

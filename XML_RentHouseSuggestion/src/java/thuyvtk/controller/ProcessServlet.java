@@ -19,8 +19,10 @@ public class ProcessServlet extends HttpServlet {
     
 //    private final String INDEX_PAGE = "adminPage.jsp";
     private final String INDEX_PAGE = "admin.jsp";
+//    private final String INDEX_PAGE = "indexSearch.jsp";
     private final String CRAWL = "CrawlServlet";
     private final String CRAWL_BACHHOAXANH_SERVLET = "CrawlBachhoaxanhServlet";
+    private final String CRAWL_MARKET_SERVLET = "CrawlMarkethServlet";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,11 +42,14 @@ public class ProcessServlet extends HttpServlet {
             if (action == null || action.equals("")) {
             } else {
                 switch (action) {
-                    case "CẬP NHẬT DỮ LIỆU":
+                    case "crawl":
                         url = CRAWL;
                         break;
                     case "bachhoaxanh":
                         url = CRAWL_BACHHOAXANH_SERVLET;
+                        break;
+                    case "market":
+                        url = CRAWL_MARKET_SERVLET;
                         break;
                 }
             }

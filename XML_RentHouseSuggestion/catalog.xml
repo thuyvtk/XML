@@ -3,4 +3,5 @@
     <system systemId="file:/D:/Study/CN8/XML/Git/Thuy/XML_RentHouseSuggestion/web/WEB-INF/schema/house.xsd" uri="src/conf/xml-resources/jaxb/house/house.xsd"/>
     <system systemId="file:/D:/Study/CN8/XML/Git/Thuy/XML/XML_RentHouseSuggestion/../../XML_RentHouseSuggestion/web/WEB-INF/schema/house.xsd" uri="src/conf/xml-resources/jaxb/housee/house.xsd"/>
     <system systemId="file:/D:/Study/CN8/XML/Git/Thuy/XML/XML_RentHouseSuggestion/web/WEB-INF/schema/house.xsd" uri="src/conf/xml-resources/jaxb/Houses/house.xsd"/>
+    <system systemId="file:/D:/Study/CN8/XML/Git/Thuy/XML/XML_RentHouseSuggestion/web/WEB-INF/schema/coopmart.xsd" uri="src/conf/xml-resources/jaxb/M/coopmart.xsd"/>
 </catalog>

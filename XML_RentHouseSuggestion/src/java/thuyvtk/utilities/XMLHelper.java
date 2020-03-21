@@ -19,10 +19,12 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import org.json.JSONException;
 import thuyvtk.common.Constraint;
+import thuyvtk.common.GenericsType;
 import thuyvtk.dao.HouseDAO;
 import thuyvtk.dto.Coordinate;
 import thuyvtk.jaxbObject.HouseItem;
 import thuyvtk.jaxbObject.ListHouse;
+import thuyvtk.jaxbObject.ListMarkets;
 import thuyvtk.parser.JsonParser;
 
 /**
@@ -55,7 +57,7 @@ public class XMLHelper {
                             coordinate = new Coordinate(0, 0);
                         }
                         item.setLongitude(coordinate.getLongitude() + "");
-                        item.setLatitude(coordinate.getLongitude() + "");
+                        item.setLatitude(coordinate.getLatitude()+ "");
                     }
                     houseDAO.insertHouse(item);
                 } //else if (!item.equals(dto)) {
@@ -102,4 +104,21 @@ public class XMLHelper {
 
         return dateFormat.format(calendar.getTime());
     }
+    
+    public Object JAXBUnmarshalling(String xmlFile, GenericsType type){
+        try {
+//            JAXBContext context = JAXBContext.newInstance(type.getClass());
+            JAXBContext context = JAXBContext.newInstance(ListMarkets.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+
+            File file = new File(xmlFile);
+//            GenericsType listObject = (GenericsType) unmarshaller.unmarshal(file);
+            ListMarkets listObject = (ListMarkets) unmarshaller.unmarshal(file);
+            return listObject;
+        } catch (JAXBException ex) {
+            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
 }

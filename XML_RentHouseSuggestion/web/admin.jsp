@@ -35,7 +35,7 @@
                 <div class="crawlNews">
                     Tin cho thuê nhà<br/>
                     <form action="ProcessServlet" method="POST">
-                        <input type="submit" value="CẬP NHẬT DỮ LIỆU" name="action" class="btnUpdate"/>
+                        <input type="submit" value="crawl" name="action" class="btnUpdate"/>
                     </form>
                 </div>
                 <div class="crawlBonus">
@@ -44,12 +44,13 @@
                     <form action="ProcessServlet" method="POST">
                         <input type="submit" value="bachhoaxanh" class="bachhoaxanh" name="action"/>
                     </form>
-<!--                    <div class="bachhoaxanh">
+                    
+                    <form action="ProcessServlet" method="POST">
+                        <input type="submit" value="market" class="coopmart" name="action"/>
+                    </form>
 
+<!--                    <div class="coopmart">
                     </div>-->
-
-                    <div class="coopmart">
-                    </div>
                     <div class="school">
                     </div>
                 </div>

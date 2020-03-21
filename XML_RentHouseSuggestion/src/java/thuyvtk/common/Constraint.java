@@ -16,6 +16,16 @@ public class Constraint {
     public static final String PHONGTOT_XML_OUTPUT = "WEB-INF/xml/crawl_output.xml";
     public static final String PHONGTOT_XSLT = "WEB-INF/xsl/main.xsl";
 
+    //bachhoaxanh
+    public static final String BACHHOAXANH_XML_CONFIG = "WEB-INF/xml/bachhoaxanh.xml";
+    public static final String BACHHOAXANH_XML_OUTPUT = "WEB-INF/xml/bachhoaxanh_output.xml";
+    public static final String BACHHOAXANH_XSLT = "WEB-INF/xsl/bachhoaxanh.xsl";
+    
+    //market
+    public static final String MARKET_XML_CONFIG = "WEB-INF/xml/market.xml";
+    public static final String MARKET_XML_OUTPUT = "WEB-INF/xml/market_output.xml";
+    public static final String MARKET_XSLT = "WEB-INF/xsl/market.xsl";
+
     //jaxB
     public static final String JAXB_GENERATE_PACKAGE = "WEB-INF/classes/thuyvtk/jaxB";
 

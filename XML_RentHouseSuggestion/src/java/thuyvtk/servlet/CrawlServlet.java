@@ -34,7 +34,7 @@ import thuyvtk.utilities.XMLHelper;
 @WebServlet(name = "CrawlServlet", urlPatterns = {"/CrawlServlet"})
 public class CrawlServlet extends HttpServlet {
 
-    private final String ADMIN = "adminPage.html";
+    private final String ADMIN = "admin.jsp";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
