@@ -9,14 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Trang của Admin</title>
         <link rel="stylesheet" href="css/admin.css"/>
     </head>
     <body>
         <div class="header">
             <div class="wellcome">
-                ${sessionScope.USER.fullname}
-                Võ Kim Thùy
+                ${sessionScope.USERNAME}
             </div>
             <form action="ProcessServlet">
                 <input type="submit" value="ĐĂNG XUẤT" class="btnLogin" name="action"/>
@@ -35,22 +34,19 @@
                 <div class="crawlNews">
                     Tin cho thuê nhà<br/>
                     <form action="ProcessServlet" method="POST">
-                        <input type="submit" value="crawl" name="action" class="btnUpdate"/>
+                        <input type="submit" value="Cập nhật dữ liệu" name="action" class="btnUpdate"/>
                     </form>
                 </div>
                 <div class="crawlBonus">
                     Tiện ích<br/>
-                    <!--<input type="submit" value="CẬP NHẬT DỮ LIÊU" name="action" class="btnUpdate"/>-->
-                    <form action="ProcessServlet" method="POST">
+<!--                    <form action="ProcessServlet" method="POST">
                         <input type="submit" value="bachhoaxanh" class="bachhoaxanh" name="action"/>
                     </form>
-                    
+                    -->
                     <form action="ProcessServlet" method="POST">
                         <input type="submit" value="market" class="coopmart" name="action"/>
                     </form>
 
-<!--                    <div class="coopmart">
-                    </div>-->
                     <div class="school">
                     </div>
                 </div>

@@ -3,30 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package thuyvtk.controller;
+package thuyvtk.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author ASUS
  */
-public class ProcessServlet extends HttpServlet {
-    
-//    private final String INDEX_PAGE = "admin.jsp";
-    private final String INDEX_PAGE = "indexSearch.jsp";
-//    private final String INDEX_PAGE = "home.jsp";
-    private final String CRAWL = "CrawlServlet";
-    private final String CRAWL_BACHHOAXANH_SERVLET = "CrawlBachhoaxanhServlet";
-    private final String CRAWL_MARKET_SERVLET = "CrawlMarkethServlet";
-    private final String SEARCH_SERVLET = "SearchServlet";
-    private final String LOGIN_SERVLET = "LoginServlet";
-    private final String LOGOUT_SERVLET = "LogoutServlet";
-
+@WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet"})
+public class LogoutServlet extends HttpServlet {
+    private final String HOME = "indexSearch.jsp";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -39,36 +33,14 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = INDEX_PAGE;
+        PrintWriter out = response.getWriter();
+        String url = HOME;
         try {
-            request.setCharacterEncoding("UTF-8");
-            String action = request.getParameter("action");
-//            action = URLEncoder.encode(action, "UTF-8");
-            if (action == null || action.equals("")) {
-            } else {
-                switch (action) {
-                    case "Cập nhật dữ liệu":
-                        url = CRAWL;
-                        break;
-                    case "bachhoaxanh":
-                        url = CRAWL_BACHHOAXANH_SERVLET;
-                        break;
-                    case "market":
-                        url = CRAWL_MARKET_SERVLET;
-                        break;
-                    case "Search":
-                        url = SEARCH_SERVLET;
-                        break;
-                    case "Đăng nhập vào tài khoản của bạn":
-                        url = LOGIN_SERVLET;
-                        break;
-                    case "ĐĂNG XUẤT":
-                        url = LOGOUT_SERVLET;
-                        break;
-                }
-            }
+            HttpSession session = request.getSession();
+            session.removeAttribute("USERNAME");
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
+            out.close();
         }
     }
 

@@ -36,8 +36,6 @@ public class HouseDAO implements Serializable{
         try {
             con = DBConnection.makeConnection();
             if (con != null) {
-//                latitude = dto.getLatitude().floatValue();
-//                longitude = dto.getLongitude().floatValue();
                 String sql = "INSERT INTO tblHouse(title,"
                         + "linkNew,"
                         + "timePost,"
@@ -46,7 +44,6 @@ public class HouseDAO implements Serializable{
                         + "size,"
                         + "electricPrice,"
                         + "waterPrice,"
-                        + "bonus,"
                         + "rentPrice,"
                         + "detail,"
                         + "latitude,"
@@ -62,12 +59,11 @@ public class HouseDAO implements Serializable{
                 stm.setString(6, dto.getSize());
                 stm.setString(7, dto.getElectricPrice());
                 stm.setString(8, dto.getWaterPrice());
-                stm.setString(9, dto.getBonus());
-                stm.setString(10, dto.getRentPrice()+"");
-                stm.setString(11, dto.getDetail());
-                stm.setFloat(12, Float.valueOf(dto.getLatitude()));
-                stm.setFloat(13, Float.valueOf(dto.getLongitude()));
-                stm.setString(14, dto.getWebsite());
+                stm.setString(9, dto.getRentPrice()+"");
+                stm.setString(10, dto.getDetail());
+                stm.setFloat(11, Float.valueOf(dto.getLatitude()));
+                stm.setFloat(12, Float.valueOf(dto.getLongitude()));
+                stm.setString(13, dto.getWebsite());
                 int row = stm.executeUpdate();
                 if (row > 0) {
                     return true;
@@ -92,7 +88,7 @@ public class HouseDAO implements Serializable{
             con = DBConnection.makeConnection();
             if (con != null) {
                 String sql = "Select id,title,timePost,img,rentAddress,size,"
-                        + "electricPrice,waterPrice,bonus,rentPrice,detail,latitude,longitude,webId"
+                        + "electricPrice,waterPrice,rentPrice,detail,latitude,longitude,webId"
                         + " from tblHouse where linkNew = ?";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, linkNew);
@@ -108,7 +104,6 @@ public class HouseDAO implements Serializable{
                     houseItem.setSize(rs.getString("size"));
                     houseItem.setElectricPrice(rs.getString("electricPrice"));
                     houseItem.setWaterPrice(rs.getString("waterPrice"));
-                    houseItem.setBonus(rs.getString("bonus"));
                     houseItem.setRentPrice(rs.getString("rentPrice"));
                     houseItem.setDetail(rs.getString("detail"));
                     houseItem.setLatitude(rs.getFloat("latitude")+"");
@@ -143,7 +138,6 @@ public class HouseDAO implements Serializable{
                         + "size =?,"
                         + "electricPrice = ?,"
                         + "waterPrice = ?,"
-                        + "bonus = ?,"
                         + "rentPrice = ?,"
                         + "detail = ?,"
                         + "latitude = ?,"
@@ -157,12 +151,11 @@ public class HouseDAO implements Serializable{
                 stm.setString(5, dto.getSize());
                 stm.setString(6, dto.getElectricPrice());
                 stm.setString(7 , dto.getWaterPrice());
-                stm.setString(8, dto.getBonus());
-                stm.setString(9, dto.getRentPrice());
-                stm.setString(10, dto.getDetail());
-                stm.setFloat(11, Float.valueOf(dto.getLatitude()));
-                stm.setFloat(12, Float.valueOf(dto.getLongitude()));
-                stm.setInt(13, Integer.valueOf(dto.getId()+""));
+                stm.setString(8, dto.getRentPrice());
+                stm.setString(9, dto.getDetail());
+                stm.setFloat(10, Float.valueOf(dto.getLatitude()));
+                stm.setFloat(11, Float.valueOf(dto.getLongitude()));
+                stm.setInt(12, Integer.valueOf(dto.getId()+""));
                 int row = stm.executeUpdate();
                 if (row > 0) {
                     return true;

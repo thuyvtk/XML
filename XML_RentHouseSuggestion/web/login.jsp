@@ -1,9 +1,12 @@
+<%-- 
+    Document   : login
+    Created on : Mar 22, 2020, 12:08:31 PM
+    Author     : ASUS
+--%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Đăng nhập</title>
@@ -12,9 +15,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/default.css"/>
         <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
-        <script type="text/javascript" src="js/login.js"></script>
     </head>
-    <body onload="login()">
+    <body>
         <!--        header-->
         <div class="header_container">
             <div class="logo" onclick="location.href = ''"></div>
@@ -33,11 +35,12 @@ and open the template in the editor.
                     <input type="text" name="txtUsername" value="" /><br/>
                     Password<br/>
                     <input type="password" name="txtPassword" value="" /><br/>
-                    <input type="submit" value="Đăng nhập vào tài khoản của bạn" name="action" class="button-login"/>
-                    <input type="hidden" name="checkLogin" value="" id="blCheckLogin"/>
-                    <!--<c:set var='top4' value="${requestScope.TOP4}"/>-->
-                </form>
 
+                    <input type="submit" value="Đăng nhập vào tài khoản của bạn" name="action" class="button-login"/>
+                    <c:if test="${requestScope.CHECK_LOGIN == false}">
+                        <h4>Tài khoản đăng nhập không đúng!</h4>
+                    </c:if>
+                </form>
             </div>
         </div>
     </body>

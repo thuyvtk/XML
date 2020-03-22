@@ -21,7 +21,6 @@
         <div class="header_container">
             <div class="logo" onclick="location.href = ''"></div>
             <div class="line">
-                <p>TÌM KIẾM NGÔI NHÀ TRONG MƠ CỦA BẠN</p>
             </div>
             <div class="love_list"></div>
             <div class="login" onclick="location.href = 'loginPage.html'"></div>

@@ -79,9 +79,12 @@ public class CrawlMarkethServlet extends HttpServlet {
                     coordinate = new Coordinate(0, 0);
                 }
                 item.setLongitude(coordinate.getLongitude() + "");
-                item.setLatitude(coordinate.getLongitude() + "");
+                item.setLatitude(coordinate.getLatitude()+ "");
                 if (marketDAO.isMarketExisted(item) == null) {
+                    try {
                     System.out.println(marketDAO.insertHouse(item));
+                    } catch (Exception e) {
+                    }
                 }
             }
         } catch (TransformerException ex) {
