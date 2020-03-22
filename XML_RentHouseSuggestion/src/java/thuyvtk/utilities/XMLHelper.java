@@ -20,7 +20,9 @@ import javax.xml.bind.Unmarshaller;
 import org.json.JSONException;
 import thuyvtk.common.Constraint;
 import thuyvtk.common.GenericsType;
+import thuyvtk.dao.HouseBonusDAO;
 import thuyvtk.dao.HouseDAO;
+import thuyvtk.dto.BonusDTO;
 import thuyvtk.dto.Coordinate;
 import thuyvtk.jaxbObject.HouseItem;
 import thuyvtk.jaxbObject.ListHouse;
@@ -42,9 +44,10 @@ public class XMLHelper {
             File file = new File(xmlFile);
             ListHouse houses = (ListHouse) unmarshaller.unmarshal(file);
             JsonParser jsonParser = new JsonParser();
+            HouseDAO houseDAO = new HouseDAO();
+            HouseBonusDAO houseBonusDAO = new HouseBonusDAO();
             for (int i = 0; i < houses.getHouse().size(); i++) {
                 HouseItem item = houses.getHouse().get(i);
-                HouseDAO houseDAO = new HouseDAO();
                 HouseItem dto = houseDAO.isHomeExisted(item.getLinkNew());
 
                 if (dto == null) {
@@ -57,9 +60,30 @@ public class XMLHelper {
                             coordinate = new Coordinate(0, 0);
                         }
                         item.setLongitude(coordinate.getLongitude() + "");
-                        item.setLatitude(coordinate.getLatitude()+ "");
+                        item.setLatitude(coordinate.getLatitude() + "");
                     }
-                    houseDAO.insertHouse(item);
+                    try {
+                        houseDAO.insertHouse(item);
+                        BonusDTO bonusDTO = initBonus(item.getBonus());
+                        int id = Integer.parseInt(houseDAO.isHomeExisted(item.getBonus()).getId()+"");
+                        if (bonusDTO.isFridge()) {
+                            houseBonusDAO.insertHouseBonus(id, 1);
+                        }
+                        if (bonusDTO.isWashing()) {
+                            houseBonusDAO.insertHouseBonus(id, 2);
+                        }
+                        if (bonusDTO.isAir_conditioner()) {
+                            houseBonusDAO.insertHouseBonus(id, 3);
+                        }
+                        if (bonusDTO.isParking()) {
+                            houseBonusDAO.insertHouseBonus(id, 4);
+                        }
+                        if (bonusDTO.isHeater()) {
+                            houseBonusDAO.insertHouseBonus(id, 5);
+                        }
+                    } catch (Exception e) {
+                    }
+
                 } //else if (!item.equals(dto)) {
                 //houseDAO.updateHouse(dto);
 //                }
@@ -104,8 +128,8 @@ public class XMLHelper {
 
         return dateFormat.format(calendar.getTime());
     }
-    
-    public Object JAXBUnmarshalling(String xmlFile, GenericsType type){
+
+    public Object JAXBUnmarshalling(String xmlFile, GenericsType type) {
         try {
 //            JAXBContext context = JAXBContext.newInstance(type.getClass());
             JAXBContext context = JAXBContext.newInstance(ListMarkets.class);
@@ -120,5 +144,25 @@ public class XMLHelper {
         }
         return null;
     }
-    
+
+    public BonusDTO initBonus(String bonusString) {
+        BonusDTO bonusDTO = new BonusDTO();
+        if (bonusString.toLowerCase().contains("tủ lạnh")) {
+            bonusDTO.setFridge(true);
+        }
+        if (bonusString.toLowerCase().contains("máy giặt")) {
+            bonusDTO.setWashing(true);
+        }
+        if (bonusString.toLowerCase().contains("đậu xe")) {
+            bonusDTO.setParking(true);
+        }
+        if (bonusString.toLowerCase().contains("điều hòa") || bonusString.toLowerCase().contains("chỗ Để Xe")) {
+            bonusDTO.setAir_conditioner(true);
+        }
+        if (bonusString.toLowerCase().contains("bình nóng lạnh")) {
+            bonusDTO.setHeater(true);
+        }
+        return bonusDTO;
+    }
+
 }

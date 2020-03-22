@@ -6,14 +6,11 @@
 package thuyvtk.dao;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.naming.NamingException;
-import thuyvtk.jaxbObject.HouseItem;
 import thuyvtk.jaxbObject.MarketItem;
 import thuyvtk.utilities.DBConnection;
 

@@ -39,7 +39,7 @@
             <xsl:with-param name="hostDomain" select="$host"/>
         </xsl:call-template>
         
-        <xsl:for-each select="$firstPage//div[@class='paginate-items']//li//a[not(@rel='next') and not(rel='prev') and text()&lt;9]">
+        <xsl:for-each select="$firstPage//div[@class='paginate-items']//li//a[not(@rel='next') and not(rel='prev') and text()&lt;1]">
             <xsl:call-template name="CrawlHouseThueNhaTro360">
                 <xsl:with-param name="page" select="document(./@href)"/>
                 <xsl:with-param name="hostDomain" select="$host"/>
