@@ -29,19 +29,21 @@ public class JsonParser {
 //            Thread.sleep(3000);
             int reponseCode = con.getResponseCode();
             if (reponseCode == 200) {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            StringBuffer reponse = new StringBuffer();
-            String inputLine;
+                BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                StringBuffer reponse = new StringBuffer();
+                String inputLine;
 
-            while ((inputLine = reader.readLine()) != null) {
-                reponse.append(inputLine);
-            }
-            reader.close();
-            JSONObject json = new JSONObject(reponse.toString());
-            Coordinate coordinate = new Coordinate();
-            coordinate.setLatitude(Float.valueOf(json.getString("latt")));
-            coordinate.setLongitude(Float.valueOf(json.getString("longt")));
-            return coordinate;
+                while ((inputLine = reader.readLine()) != null) {
+                    reponse.append(inputLine);
+                }
+                reader.close();
+                Coordinate coordinate = new Coordinate(0,0);
+                if (reponse.substring(1, 2).equals("{")) {
+                    JSONObject json = new JSONObject(reponse.toString());
+                    coordinate.setLatitude(Float.valueOf(json.getString("latt")));
+                    coordinate.setLongitude(Float.valueOf(json.getString("longt")));
+                }
+                return coordinate;
             }
 
         } catch (MalformedURLException ex) {

@@ -186,17 +186,17 @@
             
         <!--get page 2-35-->
         <xsl:for-each select="$room_page_1//ul[@class='pagination']//a[not(@rel='next')]">
-            <xsl:if test="substring-after(./@href, '?page=') &lt; 3">
+            <xsl:if test="substring-after(./@href, '?page=') &lt; 2">
                 <xsl:call-template name="GetLinkPaging">
                     <xsl:with-param name="link" select="./@href"/>
                     <xsl:with-param name="src" select="document(./@href)"/>
                 </xsl:call-template>
-                <!--                <xsl:if test="substring-after(./@href, '?page=') = 8">
+                <xsl:if test="substring-after(./@href, '?page=') = 8">
                     <xsl:call-template name="GetListLinkNextPages">
                         <xsl:with-param name="page" select="substring-after(./@href, '?page=')"/>
                         <xsl:with-param name="linkCurrentPage" select="document(./@href)"/>
                     </xsl:call-template>
-                </xsl:if>-->
+                </xsl:if>
             </xsl:if>
         </xsl:for-each>
         
