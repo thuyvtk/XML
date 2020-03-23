@@ -27,6 +27,7 @@ public class ProcessServlet extends HttpServlet {
     private final String SEARCH_SERVLET = "SearchServlet";
     private final String LOGIN_SERVLET = "LoginServlet";
     private final String LOGOUT_SERVLET = "LogoutServlet";
+    private final String SEARCH_CLIENT_SERVLET = "SearchClientServlet";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,7 +41,7 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = INDEX_PAGE;
+        String url = SEARCH_CLIENT_SERVLET;
         try {
             request.setCharacterEncoding("UTF-8");
             String action = request.getParameter("action");

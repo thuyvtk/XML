@@ -75,4 +75,7 @@ public class ListHouse {
         return this.house;
     }
 
+    public void setHouse(List<HouseItem> house) {
+        this.house = house;
+    }
 }

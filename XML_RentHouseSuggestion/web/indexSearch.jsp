@@ -18,6 +18,9 @@
         <script type="text/javascript" src="js/default.js"></script>
     </head>
     <body onload="return displaySearchOptionSpace()">
+        <script>
+            regObj = '${requestScope.INFO}';
+        </script>
         <!--        header-->
         <div class="header_container">
             <div class="logo" onclick="location.href = ''"></div>
@@ -30,14 +33,19 @@
         <!--search space-->
         <div class="search_container">
             <div id="search_space">
-                <input id="search_bar" class="controls" type="text" name="txtSearchValue" placeholder="Tìm theo khu vực, địa điểm..." />
-                <form action="ProcessServlet" method="POST">
 
+                <form action="ProcessServlet" method="POST" name="myForm" >
+                    <input id="search_bar" class="controls" type="text" name="txtSearchValue" placeholder="Tìm theo khu vực, địa điểm..." />
                     <input type="submit" value="Search" name="action" id="btn_Search"/>
                     <input type="hidden" name="latitude" value="" id="latitude_param" />
                     <input type="hidden" name="longitude" value="" id="longitude_param" />
                 </form>
 
+                <form action="ProcessServlet" method="POST" id="searchServerForm" >
+                    <input type="hidden" name="searchValue" value="" id="searchValue" />
+                    <input style="width: 50%; height: 30px;background-color: lightpink;color: white;margin-left: 150px;margin-top: 20px;border-radius: 2px" type="button" name="btSearch" value="Search" class="btn_insert"
+                           onclick="return searchProcess();"/>
+                </form>
                 <br/>
                 <input id="btn_MoreOption" type="submit" value="Tùy chọn nâng cao" name="btnMoreOption" onclick="return displaySearchOptionSpace()"/>
 
@@ -48,7 +56,7 @@
             <div class="top-houses-lable">
                 <h1 class="lable">3 Đề Xuất Tốt Nhất</h1>
             </div>
-            <div class="top-4item">
+            <div class="top-4item" id="listHouse">
                 <c:set var='top4' value="${requestScope.TOP4}"/>
                 <c:if test="${not empty top4}">
                     <c:forEach var="top" items="${top4}">
@@ -57,7 +65,7 @@
                                 <div class="image-box">
                                     <img class="item-img" src=${top.img}/> 
                                 </div>
-                                <div class="item-price">$ ${top.rentPrice}<br/>
+                                <div class="item-price">${top.rentPrice}<br/>
                                     <div class="item-location">
                                         <img src="css/icon_previous_location.png"/>
                                         <span>${top.distance} km</span>
@@ -102,6 +110,26 @@
                                     </c:if>
                                 </div>
 
+                                <div class="action">
+                                    <a href=${top.linkNew} target="_blank"><input type="submit" value="Website" name="action" class="btnBrowse"/></a>
+                                    <input type="submit" value="love" name="action" class="love"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </c:forEach>
+                </c:if>
+                <c:set var='listHouse' value="${requestScope.LISTHOUSE}"/>
+                 <c:if test="${not empty listHouse}">
+                    <c:forEach var="top" items="${listHouse}">
+                        <div class="top-item">
+                            <div class="item">
+                                <div class="image-box">
+                                    <img class="item-img" src=${top.img}/> 
+                                </div>
+                                <div class="item-price">${top.rentPrice}<br/>
+                                  
+                                </div>
                                 <div class="action">
                                     <a href=${top.linkNew} target="_blank"><input type="submit" value="Website" name="action" class="btnBrowse"/></a>
                                     <input type="submit" value="love" name="action" class="love"/>
