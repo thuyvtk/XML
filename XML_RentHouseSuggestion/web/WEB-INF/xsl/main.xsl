@@ -39,7 +39,7 @@
             <xsl:with-param name="hostDomain" select="$host"/>
         </xsl:call-template>
         
-        <xsl:for-each select="$firstPage//div[@class='paginate-items']//li//a[not(@rel='next') and not(rel='prev') and text()&lt;1]">
+        <xsl:for-each select="$firstPage//div[@class='paginate-items']//li//a[not(@rel='next') and not(rel='prev') and text()&lt;9]">
             <xsl:call-template name="CrawlHouseThueNhaTro360">
                 <xsl:with-param name="page" select="document(./@href)"/>
                 <xsl:with-param name="hostDomain" select="$host"/>
@@ -169,24 +169,24 @@
         <xsl:variable name="host" select="@link"/> 
         <xsl:variable name="room_page_1" select="document($listDoc//ul[@class='nav navbar-nav']//a[ text()='Phòng trọ']/@href)"/>
          
-            <!--get list room in page 1-->
-            <xsl:for-each select="$room_page_1//div[@class='room-item']//div[@class='block-room-item-title']//a[contains(@href,'http')]"> 
-                <xsl:element name="house"> 
-                    <xsl:element name="linkNew">
-                        <xsl:value-of select="./@href"/> 
-                    </xsl:element>
-                    <xsl:element name="timePost">
-                        <xsl:value-of select="$room_page_1//*[div[@class='block-room-item-title' and a[@href=./@href]]]//div[@class='pull-right item-info-date']/a/text()"/> 
-                    </xsl:element>
-                    <xsl:call-template name="GetRoomDetail">
-                        <xsl:with-param name="srcRoom" select="document(./@href)"/>
-                    </xsl:call-template>
-                </xsl:element> 
-            </xsl:for-each>
+        <!--get list room in page 1-->
+        <xsl:for-each select="$room_page_1//div[@class='room-item']//div[@class='block-room-item-title']//a[contains(@href,'http')]"> 
+            <xsl:element name="house"> 
+                <xsl:element name="linkNew">
+                    <xsl:value-of select="./@href"/> 
+                </xsl:element>
+                <xsl:element name="timePost">
+                    <xsl:value-of select="$room_page_1//*[div[@class='block-room-item-title' and a[@href=./@href]]]//div[@class='pull-right item-info-date']/a/text()"/> 
+                </xsl:element>
+                <xsl:call-template name="GetRoomDetail">
+                    <xsl:with-param name="srcRoom" select="document(./@href)"/>
+                </xsl:call-template>
+            </xsl:element> 
+        </xsl:for-each>
             
         <!--get page 2-35-->
         <xsl:for-each select="$room_page_1//ul[@class='pagination']//a[not(@rel='next')]">
-            <xsl:if test="substring-after(./@href, '?page=') &lt; 2">
+            <xsl:if test="substring-after(./@href, '?page=') &lt; 7">
                 <xsl:call-template name="GetLinkPaging">
                     <xsl:with-param name="link" select="./@href"/>
                     <xsl:with-param name="src" select="document(./@href)"/>

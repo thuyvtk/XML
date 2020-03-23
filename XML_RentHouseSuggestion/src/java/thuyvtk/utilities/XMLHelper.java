@@ -63,23 +63,26 @@ public class XMLHelper {
                         item.setLatitude(coordinate.getLatitude() + "");
                     }
                     try {
-                        houseDAO.insertHouse(item);
-                        BonusDTO bonusDTO = initBonus(item.getBonus());
-                        int id = Integer.parseInt(houseDAO.isHomeExisted(item.getBonus()).getId()+"");
-                        if (bonusDTO.isFridge()) {
-                            houseBonusDAO.insertHouseBonus(id, 1);
-                        }
-                        if (bonusDTO.isWashing()) {
-                            houseBonusDAO.insertHouseBonus(id, 2);
-                        }
-                        if (bonusDTO.isAir_conditioner()) {
-                            houseBonusDAO.insertHouseBonus(id, 3);
-                        }
-                        if (bonusDTO.isParking()) {
-                            houseBonusDAO.insertHouseBonus(id, 4);
-                        }
-                        if (bonusDTO.isHeater()) {
-                            houseBonusDAO.insertHouseBonus(id, 5);
+
+                        int id = houseDAO.insertHouse(item);
+                        if (id != 0) {
+
+                            BonusDTO bonusDTO = initBonus(item.getBonus());
+                            if (bonusDTO.isFridge()) {
+                                houseBonusDAO.insertHouseBonus(id, 1);
+                            }
+                            if (bonusDTO.isWashing()) {
+                                houseBonusDAO.insertHouseBonus(id, 2);
+                            }
+                            if (bonusDTO.isAir_conditioner()) {
+                                houseBonusDAO.insertHouseBonus(id, 3);
+                            }
+                            if (bonusDTO.isParking()) {
+                                houseBonusDAO.insertHouseBonus(id, 4);
+                            }
+                            if (bonusDTO.isHeater()) {
+                                houseBonusDAO.insertHouseBonus(id, 5);
+                            }
                         }
                     } catch (Exception e) {
                     }

@@ -480,6 +480,4 @@ public class HouseItem {
                 && longitude.equals(item.longitude);
     }
     
-    
-
 }

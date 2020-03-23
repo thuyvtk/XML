@@ -38,7 +38,7 @@ public class JsonParser {
                 }
                 reader.close();
                 Coordinate coordinate = new Coordinate(0,0);
-                if (reponse.substring(1, 2).equals("{")) {
+                if (reponse.toString().contains("{")) {
                     JSONObject json = new JSONObject(reponse.toString());
                     coordinate.setLatitude(Float.valueOf(json.getString("latt")));
                     coordinate.setLongitude(Float.valueOf(json.getString("longt")));

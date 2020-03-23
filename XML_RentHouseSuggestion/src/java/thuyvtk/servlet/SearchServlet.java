@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import thuyvtk.dao.HouseDAO;
+import thuyvtk.dto.HouseDTO;
 import thuyvtk.jaxbObject.HouseItem;
 
 /**
@@ -50,11 +51,11 @@ public class SearchServlet extends HttpServlet {
             HouseDAO houseDAO = new HouseDAO();
             houseDAO.findHouses(latitude, longitude, 10);
             
-            List<HouseItem> listHouses = houseDAO.getListHouses();
+            List<HouseDTO> listHouses = houseDAO.getListHouses();
             request.setAttribute("LIST_HOUSE", listHouses);
             
             List<HouseItem> top4 = new ArrayList<>();
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 3; i++) {
                 top4.add(listHouses.get(i));
             }
             System.out.println(top4.size());

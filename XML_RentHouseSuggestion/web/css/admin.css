@@ -133,6 +133,8 @@ body{
     float: left;
     margin-left: 40px;
     cursor: pointer;
+    font-size: 0;
+    border: none;
 }
 .admin{
     margin-left: 5%;

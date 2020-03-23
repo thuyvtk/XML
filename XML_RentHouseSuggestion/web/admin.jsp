@@ -17,7 +17,7 @@
             <div class="wellcome">
                 ${sessionScope.USERNAME}
             </div>
-            <form action="ProcessServlet">
+            <form action="ProcessServlet" method="POST">
                 <input type="submit" value="ĐĂNG XUẤT" class="btnLogin" name="action"/>
             </form>
         </div>
@@ -47,8 +47,9 @@
                         <input type="submit" value="market" class="coopmart" name="action"/>
                     </form>
 
-                    <div class="school">
-                    </div>
+                    <form action="ProcessServlet" method="POST">
+                        <input type="submit" value="school" class="school" name="action"/>
+                    </form>
                 </div>
             </div>
             <div class="bonus"></div>

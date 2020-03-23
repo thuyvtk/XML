@@ -3,30 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package thuyvtk.controller;
+package thuyvtk.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import thuyvtk.dao.HouseDAO;
 
 /**
  *
  * @author ASUS
  */
-public class ProcessServlet extends HttpServlet {
-    
-//    private final String INDEX_PAGE = "admin.jsp";
-    private final String INDEX_PAGE = "indexSearch.jsp";
-//    private final String INDEX_PAGE = "home.jsp";
-    private final String CRAWL = "CrawlServlet";
-    private final String CRAWL_BACHHOAXANH_SERVLET = "CrawlBachhoaxanhServlet";
-    private final String CRAWL_MARKET_SERVLET = "CrawlMarkethServlet";
-    private final String CRAWL_SCHOOL_SERVLET = "CrawlSchoolServlet";
-    private final String SEARCH_SERVLET = "SearchServlet";
-    private final String LOGIN_SERVLET = "LoginServlet";
-    private final String LOGOUT_SERVLET = "LogoutServlet";
+@WebServlet(name = "CrawlSchoolServlet", urlPatterns = {"/CrawlSchoolServlet"})
+public class CrawlSchoolServlet extends HttpServlet {
+
+    private final String ADMIN = "admin.jsp";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,39 +39,18 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = INDEX_PAGE;
+        PrintWriter out = response.getWriter();
+        String url = ADMIN;
         try {
-            request.setCharacterEncoding("UTF-8");
-            String action = request.getParameter("action");
-//            action = URLEncoder.encode(action, "UTF-8");
-            if (action == null || action.equals("")) {
-            } else {
-                switch (action) {
-                    case "Cập nhật dữ liệu":
-                        url = CRAWL;
-                        break;
-                    case "bachhoaxanh":
-                        url = CRAWL_BACHHOAXANH_SERVLET;
-                        break;
-                    case "market":
-                        url = CRAWL_MARKET_SERVLET;
-                        break;
-                    case "school":
-                        url = CRAWL_SCHOOL_SERVLET;
-                        break;
-                    case "Search":
-                        url = SEARCH_SERVLET;
-                        break;
-                    case "Đăng nhập vào tài khoản của bạn":
-                        url = LOGIN_SERVLET;
-                        break;
-                    case "ĐĂNG XUẤT":
-                        url = LOGOUT_SERVLET;
-                        break;
-                }
-            }
-        } finally {
+            HouseDAO houseDAO = new HouseDAO();
+            houseDAO.insertBonus();
+        } catch (SQLException ex) {
+            Logger.getLogger(CrawlSchoolServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NamingException ex) {
+            Logger.getLogger(CrawlSchoolServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }finally {
             request.getRequestDispatcher(url).forward(request, response);
+            out.close();
         }
     }
 
