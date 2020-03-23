@@ -34,4 +34,9 @@ public class Constraint {
 
     //geocode request
     public static final String GEOCODE_API = "https://geocode.xyz/";
+    
+    // link file for pdf
+    public static final String JAXB_XML_HOUSE_FOR_PDF = "WEB-INF/xml/housesForPDF.xml";
+    public static final String JAXB_XSL_HOUSE_FOR_PDF = "WEB-INF/xsl/house.xsl";
+    public static final String JAXB_FO_HOUSE_FOR_PDF = "WEB-INF/fo/house.fo";
 }
