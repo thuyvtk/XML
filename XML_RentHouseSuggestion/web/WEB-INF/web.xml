@@ -4,9 +4,17 @@
         <servlet-name>ProcessServlet</servlet-name>
         <servlet-class>thuyvtk.controller.ProcessServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PrintPDFServlet</servlet-name>
+        <servlet-class>thuyvtk.controller.PrintPDFServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProcessServlet</servlet-name>
         <url-pattern>/ProcessServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PrintPDFServlet</servlet-name>
+        <url-pattern>/PrintPDFServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
