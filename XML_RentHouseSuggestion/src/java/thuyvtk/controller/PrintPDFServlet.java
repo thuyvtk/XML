@@ -84,8 +84,8 @@ public class PrintPDFServlet extends HttpServlet {
 
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             response.setContentType("application/pdf");
-
-            FopFactory ff = FopFactory.newInstance(new File("C:/Users/ASUS/Downloads/fop-2.4/fop/conf/fop.xconf"));
+//D:\Software\fop-2.4\fop\conf
+            FopFactory ff = FopFactory.newInstance(new File("C:/Users/ASUS/Desktop/fop-2.4/fop/conf/fop.xconf"));
             FOUserAgent fua = ff.newFOUserAgent();
 
             Fop fop = ff.newFop(MimeConstants.MIME_PDF, fua, out);

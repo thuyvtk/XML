@@ -42,7 +42,7 @@ public class HouseDTO extends HouseItem{
     }
 
     public float getMarketDistance() {
-        return marketDistance;
+        return (float) Math.floor(marketDistance*100)/100;
     }
 
     public void setMarketDistance(float marketDistance) {

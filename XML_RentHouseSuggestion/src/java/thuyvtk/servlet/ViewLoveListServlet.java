@@ -7,31 +7,20 @@ package thuyvtk.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import thuyvtk.dao.HouseDAO;
-import thuyvtk.dto.HouseDTO;
-import thuyvtk.jaxbObject.HouseItem;
 
 /**
  *
  * @author ASUS
  */
-@WebServlet(name = "SearchServlet", urlPatterns = {"/SearchServlet"})
-public class SearchServlet extends HttpServlet {
-
-    private final String INDEX_PAGE = "indexSearch.jsp";
-
+@WebServlet(name = "ViewLoveListServlet", urlPatterns = {"/ViewLoveListServlet"})
+public class ViewLoveListServlet extends HttpServlet {
+ private final String LOVE_LIST_PAGE = "love_list.jsp";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -45,34 +34,9 @@ public class SearchServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String url = INDEX_PAGE;
+        String url = LOVE_LIST_PAGE;
         try {
-            String latitude = request.getParameter("latitude");
-            String longitude = request.getParameter("longitude");
-             HttpSession session = request.getSession();
-            session.setAttribute("LATITUDE", latitude);
-            session.setAttribute("LONGITUDE", longitude);
-            HouseDAO houseDAO = new HouseDAO();
-            houseDAO.findHouses(latitude, longitude, 10);
-            
-            List<HouseDTO> listHouses = houseDAO.getListHouses();
-            request.setAttribute("LIST_HOUSE", listHouses);
-            session.setAttribute("LIST_HOUSE", listHouses);
-            List<HouseItem> top4 = new ArrayList<>();
-            for (int i = 0; i < 3; i++) {
-                top4.add(listHouses.get(i));
-            }
-            request.setAttribute("TOP4", top4);
-            
-           
-            
-//            System.out.println(latitude +"-"+longitude);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(SearchServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(SearchServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NamingException ex) {
-            Logger.getLogger(SearchServlet.class.getName()).log(Level.SEVERE, null, ex);
+            HttpSession session = request.getSession();
         }finally {
             request.getRequestDispatcher(url).forward(request, response);
             out.close();

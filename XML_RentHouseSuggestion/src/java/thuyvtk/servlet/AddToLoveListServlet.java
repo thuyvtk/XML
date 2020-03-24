@@ -3,33 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package thuyvtk.controller;
+package thuyvtk.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import thuyvtk.cart.LoveListBean;
+import thuyvtk.dto.HouseDTO;
 
 /**
  *
  * @author ASUS
  */
-public class ProcessServlet extends HttpServlet {
-    
-//    private final String INDEX_PAGE = "admin.jsp";
-    private final String INDEX_PAGE = "indexSearch.jsp";
-//    private final String INDEX_PAGE = "home.jsp";
-    private final String CRAWL = "CrawlServlet";
-    private final String CRAWL_BACHHOAXANH_SERVLET = "CrawlBachhoaxanhServlet";
-    private final String CRAWL_MARKET_SERVLET = "CrawlMarkethServlet";
-    private final String CRAWL_SCHOOL_SERVLET = "CrawlSchoolServlet";
-    private final String SEARCH_SERVLET = "SearchServlet";
-    private final String LOGIN_SERVLET = "LoginServlet";
-    private final String LOGOUT_SERVLET = "LogoutServlet";
-    private final String SEARCH_CLIENT_SERVLET = "SearchClientServlet";
-    private final String ADD_TO_LOVELIST_SERVLET = "AddToLoveListServlet";
-    private final String VIEW_LOVELIST_SERVLET = "ViewLoveListServlet";
+@WebServlet(name = "AddToLoveListServlet", urlPatterns = {"/AddToLoveListServlet"})
+public class AddToLoveListServlet extends HttpServlet {
+
+    private final String INDEX_PAGE = "ProcessServlet";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,45 +38,34 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url = SEARCH_CLIENT_SERVLET;
+        PrintWriter out = response.getWriter();
+        String url = INDEX_PAGE;
         try {
-            request.setCharacterEncoding("UTF-8");
-            String action = request.getParameter("action");
-//            action = URLEncoder.encode(action, "UTF-8");
-            if (action == null || action.equals("")) {
-            } else {
-                switch (action) {
-                    case "Cập nhật dữ liệu":
-                        url = CRAWL;
-                        break;
-                    case "bachhoaxanh":
-                        url = CRAWL_BACHHOAXANH_SERVLET;
-                        break;
-                    case "market":
-                        url = CRAWL_MARKET_SERVLET;
-                        break;
-                    case "school":
-                        url = CRAWL_SCHOOL_SERVLET;
-                        break;
-                    case "Search":
-                        url = SEARCH_SERVLET;
-                        break;
-                    case "Đăng nhập vào tài khoản của bạn":
-                        url = LOGIN_SERVLET;
-                        break;
-                    case "ĐĂNG XUẤT":
-                        url = LOGOUT_SERVLET;
-                        break;
-                    case "love":
-                        url = ADD_TO_LOVELIST_SERVLET;
-                        break;
-                    case "View love list":
-                        url = VIEW_LOVELIST_SERVLET;
-                        break;
-                }
+            HttpSession session = request.getSession(true);
+            
+            String latitude = (String) session.getAttribute("LATITUDE");
+            String longitude = (String) session.getAttribute("LONGITUDE");
+            LoveListBean loveListBean = (LoveListBean) session.getAttribute("LOVE_LIST");
+            
+            if (loveListBean == null) {
+                loveListBean = new LoveListBean();
+            } 
+            int index = Integer.parseInt(request.getParameter("index"));
+            
+            List<HouseDTO> result = (List<HouseDTO>) session.getAttribute("LIST_HOUSE");
+            HouseDTO loveItem = result.get(index);
+            
+            boolean exist = loveListBean.addRentNew(loveItem);
+            if (exist) {
+                request.setAttribute("check_exist", exist);
             }
+            session.setAttribute("LOVE_LIST", loveListBean);
+            
+            url = "ProcessServlet?action=Search&latitude="+latitude+"&longitude="+longitude;
+            
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
+            out.close();
         }
     }
 

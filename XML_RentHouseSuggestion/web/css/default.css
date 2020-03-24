@@ -97,12 +97,14 @@
 .love_list{
     height: 30px;
     width: 30px;
-    background-image: url("icon_love_list_1.png");
+    background: url("icon_love_list_1.png") #243238;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin-top: 20px;
     cursor: pointer;
+    border: none;
+    font-size: 0px;
 }
 .search_container{
     width: 100%;
@@ -248,14 +250,14 @@ body{
 .row-1{
     width: 100%;
     height: 330px;
-    background: red;
     padding-left: 4%;
+    margin-bottom: 30px;
 }
 .row-item{
-    width: 23%;
+    width: 22%;
     height: 100%;
     float: left;
-    margin-right: 5%;
+    margin-right: 2.5%;
 }
 
 .image-box {

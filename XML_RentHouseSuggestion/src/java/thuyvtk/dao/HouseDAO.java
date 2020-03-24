@@ -195,12 +195,8 @@ public class HouseDAO implements Serializable {
         try {
             con = DBConnection.makeConnection();
             if (con != null) {
-                String sql = "SELECT * FROM (select id,title,linkNew,timePost,img,rentAddress,size,electricPrice,waterPrice"
-                        + ",rentPrice,detail,latitude,longitude,webId,"
-                        + "( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) + sin( radians(?) ) * sin( radians( latitude ) ) ) ) "
-                        + "as 'distance' FROM tblHouse "
-                        + "WHERE ( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) + sin( radians(?) ) * sin( radians( latitude ) ) ) ) < ?) H "
-                        + "JOIN tblHouse_Bonus B ON H.id  = B.houseId order by distance";
+                
+                String sql = "SELECT *  FROM (select id,title,linkNew,timePost,img,rentAddress,size,electricPrice,waterPrice,rentPrice,detail,latitude,longitude,webId,( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) + sin( radians(?) ) * sin( radians( latitude ) ) ) ) as 'distance', (select Top 1 ( 6371 * acos( cos( radians(h.latitude) ) * cos( radians( m.latitude ) ) * cos( radians( m.longitude ) - radians(h.longitude) ) + sin( radians(h.latitude) ) * sin( radians( m.latitude ) ) ) ) as 'distance' FROM tblMarket m WHERE ( 6371 * acos( cos( radians(h.latitude) ) * cos( radians( m.latitude ) ) * cos( radians( m.longitude ) - radians(h.longitude) ) + sin( radians(h.latitude) ) * sin( radians( m.latitude ) ) ) ) < 10 order by distance) as market FROM tblHouse h WHERE ( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) + sin( radians(?) ) * sin( radians( latitude ) ) ) ) < ?) H JOIN tblHouse_Bonus B ON H.id  = B.houseId order by distance";
                 stm = con.prepareStatement(sql);
                 stm.setFloat(1, Float.parseFloat(latitude));
                 stm.setFloat(2, Float.parseFloat(longitude));
@@ -234,6 +230,7 @@ public class HouseDAO implements Serializable {
                         houseItem.setLongitude(rs.getFloat("longitude") + "");
                         houseItem.setWebsite(rs.getString("webId"));
                         houseItem.setDistance(rs.getFloat("distance"));
+                        houseItem.setMarketDistance(rs.getFloat("market"));
                         
                         BonusDTO bonus = new BonusDTO();
                         bonus = helper.setBonus(bonus, rs.getInt("bonusId"));
