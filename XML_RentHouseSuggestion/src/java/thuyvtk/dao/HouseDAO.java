@@ -18,6 +18,7 @@ import javax.naming.NamingException;
 import thuyvtk.dto.BonusDTO;
 import thuyvtk.dto.HouseDTO;
 import thuyvtk.jaxbObject.HouseItem;
+import thuyvtk.jaxbObject.ListHouse;
 import thuyvtk.utilities.DBConnection;
 import thuyvtk.utilities.Utilites;
 //import thuyvtk.jaxB.HouseItem;
@@ -295,6 +296,100 @@ public class HouseDAO implements Serializable {
             }
         }
         return false;
+    }
+    
+    public ListHouse findLasted100House() throws ClassNotFoundException, SQLException, NamingException {
+        ListHouse houses = new ListHouse();
+        ArrayList<HouseItem> listHouse = (ArrayList<HouseItem>) houses.getHouse();
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBConnection.makeConnection();
+            if (con != null) {
+                String sql = "select TOP 100 id,title,linkNew,timePost,img,rentAddress,size,electricPrice,waterPrice,rentPrice,detail,latitude,longitude,webId FROM tblHouse order by timePost DESC";
+                stm = con.prepareStatement(sql);
+                rs = stm.executeQuery();
+                while (rs.next()) {
+                    HouseItem houseItem = new HouseItem();
+                    int id = rs.getInt("id"); 
+                        houseItem.setId(BigInteger.valueOf(id));
+                        houseItem.setTitle(rs.getString("title"));
+                        houseItem.setLinkNew(rs.getString("linkNew"));
+                        houseItem.setTimePost(rs.getDate("timePost") + "");
+                        houseItem.setImg(rs.getString("img"));
+                        houseItem.setRentAddress(rs.getString("rentAddress"));
+                        houseItem.setSize(rs.getString("size"));
+                        houseItem.setElectricPrice(rs.getString("electricPrice"));
+                        houseItem.setWaterPrice(rs.getString("waterPrice"));
+                        houseItem.setRentPrice(rs.getString("rentPrice"));
+                        houseItem.setDetail(rs.getString("detail"));
+                        houseItem.setLatitude(rs.getFloat("latitude") + "");
+                        houseItem.setLongitude(rs.getFloat("longitude") + "");
+                        houseItem.setWebsite(rs.getString("webId"));
+                        listHouse.add(houseItem); 
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return houses;
+    }
+    
+    public ListHouse searchLikeAddress(String searchValue) throws ClassNotFoundException, SQLException, NamingException {
+        ListHouse houses = new ListHouse();
+        ArrayList<HouseItem> listHouse = (ArrayList<HouseItem>) houses.getHouse();
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBConnection.makeConnection();
+            if (con != null) {
+                String sql = "select TOP 100 id,title,linkNew,timePost,img,rentAddress,size,electricPrice,waterPrice,rentPrice,detail,latitude,longitude,webId FROM tblHouse "
+                        + "Where rentAddress like ? order by timePost DESC";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, "%"+ searchValue + "%");
+                rs = stm.executeQuery();
+                while (rs.next()) {
+                    HouseItem houseItem = new HouseItem();
+                    int id = rs.getInt("id"); 
+                        houseItem.setId(BigInteger.valueOf(id));
+                        houseItem.setTitle(rs.getString("title"));
+                        houseItem.setLinkNew(rs.getString("linkNew"));
+                        houseItem.setTimePost(rs.getDate("timePost") + "");
+                        houseItem.setImg(rs.getString("img"));
+                        houseItem.setRentAddress(rs.getString("rentAddress"));
+                        houseItem.setSize(rs.getString("size"));
+                        houseItem.setElectricPrice(rs.getString("electricPrice"));
+                        houseItem.setWaterPrice(rs.getString("waterPrice"));
+                        houseItem.setRentPrice(rs.getString("rentPrice"));
+                        houseItem.setDetail(rs.getString("detail"));
+                        houseItem.setLatitude(rs.getFloat("latitude") + "");
+                        houseItem.setLongitude(rs.getFloat("longitude") + "");
+                        houseItem.setWebsite(rs.getString("webId"));
+                        listHouse.add(houseItem); 
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return houses;
     }
 
 }

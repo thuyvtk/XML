@@ -1,119 +1,1603 @@
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
-true
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<houses>
+    <house>
+        <id>881</id>
+        <title>Cho nữ thuê phòng trọ nhà mặt tiền quận 3</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-nu-thue-phong-tro-nha-mat-tien-quan-3-1668551</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/rEAddyup.jpg</img>
+        <rentAddress>288B8 Đường Nam Kỳ Khởi Nghĩa, Quận 3, Hồ Chí Minh</rentAddress>
+        <size>23 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 100 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.7891445</latitude>
+        <longitude>106.68474</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>880</id>
+        <title>Cho thue Can Ho mien trung gian</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-can-ho-mien-trung-gian-1668553</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/VAl6IAbP.jpg</img>
+        <rentAddress>Chun cu Binh Tri Dong B</rentAddress>
+        <size>60 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>6 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.741439</latitude>
+        <longitude>106.603676</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>879</id>
+        <title>Phòng full nội thất xô viết nghệ tĩnh p.26 bình th</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-full-noi-that-xo-viet-nghe-tinh-p26-binh-th-1668555</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/p6LAQYUD.jpg</img>
+        <rentAddress>Xô Viết Nghệ Tĩnh, Khu Phố 5, phường 26, Bình Thạnh, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 300 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.812037</latitude>
+        <longitude>106.7151</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>878</id>
+        <title>Nhà cho thuê gần ngã tư quang trung thống nhất</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/nha-cho-thue-gan-nga-tu-quang-trung-thong-nhat-1668557</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/J6ALL55I.jpg</img>
+        <rentAddress>579/3 Quang Trung, Phường 11, Gò Vấp, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>32 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.834343</latitude>
+        <longitude>106.66374</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>877</id>
+        <title>Cần tim nhà cho thuê nhỏ gọn sạch sẽ có gác</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-tim-nha-cho-thue-nho-gon-sach-se-co-gac-1668558</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/72TOXPqr.jpg</img>
+        <rentAddress>1560 tỉnh lộ 10</rentAddress>
+        <size>20 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.760782</latitude>
+        <longitude>106.58195</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>876</id>
+        <title>Căn hộ siêu giảm giá full nội thất gần cầu Phú Mỹ</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-sieu-giam-gia-full-noi-that-gan-cau-phu-my-1668559</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/0gADSD6x.jpg</img>
+        <rentAddress>588 Huỳnh Tấn Phát</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.735393</latitude>
+        <longitude>106.7296</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>875</id>
+        <title>Căn hộ full nt_Hoàn toàn mới_Gần chợ Tân Mỹ</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-full-nt-hoan-toan-moi-gan-cho-tan-my-1668560</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/jMmtBEQU.jpg</img>
+        <rentAddress>Đường số 11 Tân Phú</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.736624</latitude>
+        <longitude>106.71503</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>874</id>
+        <title>Phòng trong nhà nguyên căn tháng 4 dọn vô liền</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-trong-nha-nguyen-can-thang-4-don-vo-lien-1668561</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/65Pap3d0.jpg</img>
+        <rentAddress>436/59/8 Cách Mạng Tháng Tám, Phường 11, Quận 3, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>20 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu/ Tháng</rentPrice>
+        <detail>Giờ giấc tự do ko chung chủ. Điện nước giá nhà nước chia đều cả nhà 1 tháng tb chưa tới 180k. Mọi ng trong nhà vui vẻ hoà đồng ạ. Phòng ở tối đa 3 người. </detail>
+        <latitude>10.78526</latitude>
+        <longitude>106.67089</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>873</id>
+        <title>Cho Thuê Phòng Trong Nhà Nguyên Căn Q1 12 và 18m2</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-trong-nha-nguyen-can-q1-12-va-18m2-1668562</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/SRUzTtdu.jpg</img>
+        <rentAddress>115/52A Trần Đình Xu</rentAddress>
+        <size>18 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 100 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.761633</latitude>
+        <longitude>106.687485</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>872</id>
+        <title>CHO THUÊ PHÒNG MỚI QUẬN 11</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-moi-quan-11-1668563</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/pomTsRAB.jpg</img>
+        <rentAddress>88 LÊ ĐẠI HÀNH QUẬN 11.</rentAddress>
+        <size>20 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.766488</latitude>
+        <longitude>106.65319</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>871</id>
+        <title>Cho thuê Căn hộ mini 25m2 ngay Bình Tân</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-can-ho-mini-25m2-ngay-binh-tan-1668564</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/SbtCUbTQ.jpg</img>
+        <rentAddress>636 lê trọng tấn, bình hưng hòa</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 150 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.81376</latitude>
+        <longitude>106.60684</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>1011</id>
+        <title>Nhà số 11, ngõ 199 đường Trường Chinh</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/nha-so-11-ngo-199-duong-truong-chinh-1668554</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/DFEXuRu2.jpg</img>
+        <rentAddress>Ngõ 199 Trường Chinh, Khương Thượng, Thanh Xuân, Hà Nội, Việt Nam</rentAddress>
+        <size>100 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>20 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>21.00103</latitude>
+        <longitude>105.82714</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>1012</id>
+        <title>Cho thuê nhà nguyên căn 402 Bùi xương trạch</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-nha-nguyen-can-402-bui-xuong-trach-1668552</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>https://thuenhatro360.com/u/i/kpXyQI8i.jpg</img>
+        <rentAddress>402 Bùi Xương Trạch, Khương Đình, Thanh Xuân, Hà Nội, Việt Nam</rentAddress>
+        <size>50 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>12 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>20.985817</latitude>
+        <longitude>105.81854</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>1151</id>
+        <title>Còn Trống 3 Phòng - Giảm Giá Khuyến Mãi Mugrave;a Dịch</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/con-trong-3-phong-giam-gia-khuyen-mai-mua-dich</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/con-trong-3-phong-giam-gia-khuyen-mai-mua-dich-resized-iulye.jpg</img>
+        <rentAddress>142/44 Nguyễn Thị Thập Nguyễn Thị Thập 7 Hồ Chí Minh </rentAddress>
+        <size>20m</size>
+        <electricPrice>3.5 Nghìn/số</electricPrice>
+        <waterPrice>80 Nghìn/người</waterPrice>
+        <rentPrice>3,000,000 Đ/tháng</rentPrice>
+        <detail>PHÒNG TRỌ QUẬN 7 Nhằm hỗ trợ các ban thuê phòng mùa dịch này .  Hệ thống phòng trọ bên mình sẽ giảm giá phòng ,các chi phí liên quan Ra chương trình khuyến mãi Gắn wifi miễn phí trong phòng . ☑1 - Phòng : 3.500.000đ : gác, kệ bếp, máy lạnh, wc riêng, cưa sổ, nệm, máy nóng lạnh, tủ lạnh☑ 2 - Phòng : 3.200.000đ : ban công, cửa sổ, tủ quần áo, kệ bếp, wc riêng . máy lạnh☑3 - Phòng : 3.000.000: kệ bếp , wc riêng , máy lạnh===========================================❌ Hợp đồng thuê 3 tháng mình giảm 200k tháng đầu thuê❌ Hợp đồng thuê 6 tháng giảm giá phòng ( 200k) Tặng dung dịch vệ sinh : nước rữa tay , dung dịch lao nhà LH : 0836388111</detail>
+        <latitude>10.80397</latitude>
+        <longitude>106.67533</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1152</id>
+        <title>Cho thuê căn hộ full đồ tại mỹ đình</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/cho-thue-can-ho-full-do-tai-my-dinh</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/cho-thue-can-ho-full-do-tai-my-dinh-resized-lnzai.jpg</img>
+        <rentAddress>Số 27 ngõ 129 Phố Thiên Hiền - Nam Từ Liêm - HN Mỹ Đình Từ Liêm Hà Nội </rentAddress>
+        <size>30m</size>
+        <electricPrice>3800 Nghìn/số</electricPrice>
+        <waterPrice>100 Nghìn/người</waterPrice>
+        <rentPrice>4,500,000 Đ/tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1153</id>
+        <title>Phòng Thạnh Lộc 37 gần CĐ Điện Lực Bến xe 03</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/phong-thanh-loc-37-gan-cd-dien-luc-ben-xe-03</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/phong-thanh-loc-37-gan-cd-dien-luc-ben-xe-03-udg0p.jpg</img>
+        <rentAddress>105/8/6 Thạnh Lộc 37 Thạnh Lộc 37 12 Hồ Chí Minh </rentAddress>
+        <size>20m</size>
+        <electricPrice>Chưa xác định</electricPrice>
+        <waterPrice>Chưa xác định</waterPrice>
+        <rentPrice>1,400,000 Đ/tháng</rentPrice>
+        <detail>Cho thuê phòng trọ Q.12 gần trường Cao Đẳng Điện Lực 900m. cách bến xe buýt 03 Thạnh lộc 200mGiá 1tr4-1tr5. Vệ sinh trong phòng Đồng hồ điện nước riêng xài nhiu trả nhiêu Internet miễn phí Xe để trong phòng. Dãy trọ riêng biệt giờ giấc tự doĐia chỉ 105/8/6 Thạnh Lộc 37 - KP1 Thạnh Lộc, Quận 12, Hồ Chí Minh, Vietnam.(Tọa độ google maps: 10.877217, 106.684300) Các bạn cứ google maps là đến dãy trọ để xem nhé. Đến lẩu bò đồng quê thạnh lộc hay mầm non Tân Việt Mỹ alo mình chỉ vào.Thông tin chi tiết bên dưới ạPhòng trọ 20m2 (13m2 + 7m2) gác tại đường Thạnh Lộc 37. Cách bến xe buýt 03 chỉ 200m, cao đẳng điện lực 900m. Lối đi riêng.LH: 0934010057 Nghĩa - (zalo) facebook thoải mái.</detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1154</id>
+        <title>Cho thuê phòng trọ đường Lê Đức Thọ, P.15, Quận Gò vấp</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/cho-thue-phong-tro-duong-le-duc-tho-p15-quan-go-vap</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/cho-thue-phong-tro-duong-le-duc-tho-p15-quan-go-vap-pesa8.jpg</img>
+        <rentAddress>Đường Lê Đức Thọ, P15, Q.GV 1 Gò Vấp Hồ Chí Minh </rentAddress>
+        <size>12m</size>
+        <electricPrice>3,5 Nghìn/số</electricPrice>
+        <waterPrice>50 Nghìn/người</waterPrice>
+        <rentPrice>1,200,000,000 Đ/tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1155</id>
+        <title>Cho Thuê Phòng Đẹp Mới Xây Quận Phú Nhuận Ưu Tiên Cán Bộ,Cnv Nữ</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/cho-thue-phong-dep-moi-xay-quan-phu-nhuan-uu-tien-can-bocnv-nu-1584184317uj5di</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/cho-thue-phong-dep-moi-xay-quan-phu-nhuan-uu-tien-can-bocnv-nu-1584184317uj5di-qwitq.jpg</img>
+        <rentAddress>235A Hoàng Hoa Thám,Phường 5,Phú Nhuận Hoàng Hoa Thám Phú Nhuận Hồ Chí Minh </rentAddress>
+        <size>24m</size>
+        <electricPrice>Chưa xác định</electricPrice>
+        <waterPrice>Chưa xác định</waterPrice>
+        <rentPrice>3,000,000 Đ/tháng</rentPrice>
+        <detail>Phòng trọ mới xây đẹp,sạch se, thoang mat, có toilet riêng trong phòng,wifi, CAP TV máy nước nóngnăng lượng mặt trời, thuận tiện đi lại Q1, Phú Nhuận, Bình Thạnh, gần chợ ,sthi, ... Xem qua sẽ thích ngay , giá rẻ chỉ 3tr / phòng.Điện nước tính sát giánhà nước,đảm bảo luôn sạch sẽ và an toàn, thân thiện, cac bạn liên hệ trực tiếpcô chu nha: cô Muoi: 0765209741 nha, địa chỉ Hoang Hoa Tham, Phú Nhuận, ( giaovoi duong Phan Đăng Luu) nha ! Giá:   3,0triệu / tháng Diện tích:   27 m 2 Địa chỉ:   235A Đường Hoàng Hoa Thám, Phường 5, QuậnPhú Nhuận, Hồ Chí Minh Liên hệ:  cô MườiĐiện Thoại:   0765209741</detail>
+        <latitude>16.46591</latitude>
+        <longitude>107.58993</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1156</id>
+        <title>Cho thuê phòng trọ 20m2 tại ngõ 134 Quan Nhân, Thanh Xuân</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/cho-thue-phong-tro-20m2-tai-ngo-134-quan-nhan-thanh-xuan-1584135078nvtoi</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/cho-thue-phong-tro-20m2-tai-ngo-134-quan-nhan-thanh-xuan-1584135034n9n2e-ybtem.jpg</img>
+        <rentAddress>số 1 ngõ 134 Quan Nhân, Nhân Chính, Thanh Xuân, Hà Nội Quan Nhân Thanh Xuân Hà Nội </rentAddress>
+        <size>20m</size>
+        <electricPrice>Chưa xác định</electricPrice>
+        <waterPrice>Chưa xác định</waterPrice>
+        <rentPrice>2,300,000 Đ/tháng</rentPrice>
+        <detail></detail>
+        <latitude>21.0292</latitude>
+        <longitude>105.85325</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1157</id>
+        <title>ĐỪNG QUÁ THAM RẺ MÀ COI THƯỜNG SỨCKHỎE BẢN THÂN</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/dung-qua-tham-re-ma-coi-thuong-suckhoe-ban-than</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/dung-qua-tham-re-ma-coi-thuong-suckhoe-ban-than-resized-ukzs2.jpg</img>
+        <rentAddress>85A Nguyễn Thượng Hiền, p5, Bình Thạnh 05 Bình Thạnh Hồ Chí Minh </rentAddress>
+        <size>18m</size>
+        <electricPrice>3500 Nghìn/số</electricPrice>
+        <waterPrice>Nghìn/người</waterPrice>
+        <rentPrice>3,600,000 Đ/tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1158</id>
+        <title>Cho thuê phòng gần ngã tư canh, An trai</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/cho-thue-phong-gan-nga-tu-canh-an-trai</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/cho-thue-phong-gan-nga-tu-canh-an-trai-resized-pc7gg.jpg</img>
+        <rentAddress>19/2 ngõ 23 An trai, Vân canh 32 Từ Liêm Hà Nội </rentAddress>
+        <size>25m</size>
+        <electricPrice>Nhà nước quy định</electricPrice>
+        <waterPrice>Nhà nước quy định</waterPrice>
+        <rentPrice>2,100,000 Đ/tháng</rentPrice>
+        <detail>Phòng trọ An trai -Vân canhCòn nhiều phòng tại 19/2 ngõ 23 An trai, Vân canhPhòng đẹp, hiện đại, 25 m2 , ban công, cửa sổ, camera an ninh, để xe miễn phí.Giờ giấc thỏa mái,  không chung chủ. Điện 3,8k, nước 25k/m3, internet 100k. Giá thuê : 2,1 - 2,3 tr. Đặt cọc 1 tháng. Lh : 0916335985 chú Sơn.</detail>
+        <latitude>21.0292</latitude>
+        <longitude>105.85325</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1159</id>
+        <title>Phòng trọ 25 m2 An trai, Vân canh</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/phong-tro-25-m2-an-trai-van-canh</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/phong-tro-25-m2-an-trai-van-canh-resized-z374c.jpg</img>
+        <rentAddress>19/2 ngõ 23 An trai, Vân canh 422 Hoài Đức Hà Nội </rentAddress>
+        <size>25m</size>
+        <electricPrice>Nhà nước quy định</electricPrice>
+        <waterPrice>Nhà nước quy định</waterPrice>
+        <rentPrice>2,100,000 Đ/tháng</rentPrice>
+        <detail>Còn nhiều phòng tại khu nhà chung cư mới xây. Phòng 25 m2, tiện nghi, có cửa sổ , ban công, chỗ để xe tầng 1, camera an ninh. Giờ giấc thỏa mái , không chung chủ. Giá thuê từ 2,1 - 2,3 tr , đặt cọc 1 tháng. Điện 3,8k nước 25k/m3 , internet 100k.. Địa chỉ: số 19/2 ngõ 23 xóm 1 An trai, Vân Canh, cạnh chợ Vân canh. Liên hệ : chú Sơn 0916335985.</detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1160</id>
+        <title>Cho thuê phòng trọ 20m2 tại ngõ 134 Quan Nhân, Thanh Xuân</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/cho-thue-phong-tro-20m2-tai-ngo-134-quan-nhan-thanh-xuan</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/cho-thue-phong-tro-20m2-tai-ngo-134-quan-nhan-thanh-xuan-joqgh.jpg</img>
+        <rentAddress>số 1 Ngõ 134 Quan Nhân, Nhân Chính, Thanh Xuân, Hà Nội Quan Nhân Thanh Xuân Hà Nội </rentAddress>
+        <size>20m</size>
+        <electricPrice>Chưa xác định</electricPrice>
+        <waterPrice>Chưa xác định</waterPrice>
+        <rentPrice>2,300,000 Đ/tháng</rentPrice>
+        <detail>﻿Cho thuê NỮ sinh viên và người đi làm NỮ thuê phòngDiện tích: 20m2Đầy đủ tiện nghi: điều hòa, internet, giường tủ, bình nước nóng, truyền hình cáp,...Có tầng 1 để xe máyGần các trường Đại học KHXHNV  Đại học KHTN,...Đường to, sạch sẽ, yên tĩnh, tiện đi lại.Địa chỉ: số 1 ngõ 134 Quan Nhân, Nhân Chính, Thanh Xuân, Hà NộiLiên hệ chính chủ: 0947 143 463</detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1161</id>
+        <title>Phòng bao điện nước quận 1</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/phong-bao-dien-nuoc-quan-1</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/phong-bao-dien-nuoc-quan-1-resized-1ynxn.jpg</img>
+        <rentAddress>4/2a Trần Khắc Chân 1 Hồ Chí Minh </rentAddress>
+        <size>25m</size>
+        <electricPrice>Chưa xác định</electricPrice>
+        <waterPrice>Chưa xác định</waterPrice>
+        <rentPrice>7,000,000 Đ/tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.80397</latitude>
+        <longitude>106.67533</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1162</id>
+        <title>- Cho thuê phòng trọ cao cấp full nội thất</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/cho-thue-phong-tro-cao-cap-full-noi-that</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/cho-thue-phong-tro-cao-cap-full-noi-that-resized-dirqf.jpg</img>
+        <rentAddress>Hẻm 766 CMT8 Cách Mạng Tháng Tám Tân Bình Hồ Chí Minh </rentAddress>
+        <size>30m</size>
+        <electricPrice>3.5 Nghìn/số</electricPrice>
+        <waterPrice>100 Nghìn/người</waterPrice>
+        <rentPrice>5,500,000 Đ/tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.78761</latitude>
+        <longitude>106.66312</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1163</id>
+        <title>Phòng ghép trung tâm Q1, tiện nghi cho dân văn phòng</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/phong-ghep-trung-tam-q1-tien-nghi-cho-dan-van-phong</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/phong-ghep-trung-tam-q1-tien-nghi-cho-dan-van-phong-resized-gtbul.jpg</img>
+        <rentAddress>9 Cao Bá Nhạ Nguyễn Cư Trinh Q1 Cao Bá Nhạ 1 Hồ Chí Minh </rentAddress>
+        <size>34m</size>
+        <electricPrice>Nhà nước quy định</electricPrice>
+        <waterPrice>Nhà nước quy định</waterPrice>
+        <rentPrice>1,100,000 Đ/tháng</rentPrice>
+        <detail>Bạn mình mới dọn đi nên mình kiếm thêm 2 bạn nữa share phòng tại chung cư Cao Bá Nhạ. chỗ ở sạch sẽ, tiện nghi đầy đủ: tivi, máy giặt tủ lạnh, wifi, vòi nóng lạnh, bếp điện.... bạn không cần sắm thêm khi vào ở. Yêu cầu tuyển người đàng hoàng , có việc làm ổn định vì mình và bạn mình đều có thu nhập ổn định làm giờ hành chính. Giá thuê 1tr1.</detail>
+        <latitude>10.84179</latitude>
+        <longitude>106.77379</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1164</id>
+        <title>can tim ban nu o ghep</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/can-tim-ban-nu-o-ghep-1583352949jmk3k</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/can-tim-ban-nu-o-ghep-1583352949jmk3k-resized-gezqx.jpg</img>
+        <rentAddress>793/51 Trần Xuân Soạn Q7 Trần Xuân Soạn 7 Hồ Chí Minh </rentAddress>
+        <size>40m</size>
+        <electricPrice>Nhà nước quy định</electricPrice>
+        <waterPrice>Nhà nước quy định</waterPrice>
+        <rentPrice>1,000,000 Đ/tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>1165</id>
+        <title>Căn Hộ Tiện Nghi Ngay Lotte Cộng Hòa, Sát Sân Bay</title>
+        <linkNew>http://phongtot.vn/phong-tro-nha-tro/can-ho-tien-nghi-ngay-lotte-cong-hoa-sat-san-bay</linkNew>
+        <timePost>2020-03-21</timePost>
+        <img>http://media.phongtot.vn/xc5tx4cj/can-ho-tien-nghi-ngay-lotte-cong-hoa-sat-san-bay-resized-alwcq.jpg</img>
+        <rentAddress>37/2A/5 đường C18, P.12, Q.Tân Bình C18 Tân Bình Hồ Chí Minh </rentAddress>
+        <size>33m</size>
+        <electricPrice>Nhà nước quy định</electricPrice>
+        <waterPrice>Nhà nước quy định</waterPrice>
+        <rentPrice>5,000,000 Đ/tháng</rentPrice>
+        <detail>Dự án: Căn Hộ Studio Gần Lotte Cộng Hòa.Thông tin chi tiết:- Đặc điểm phòng: Phòng rất SANG TRỌNG  THOÁNG MÁT: diệntích từ 32m2, CĂN HỘ CÓ BAN CÔNG, mới xây, rất ĐẸP, và SÁNG SỦA (có nắng và giótự nhiên), trần cao 3.5m cực kỳ THOÁNG MÁT. Có hệ thống thông gió trước nhà, giữanhà và sau nhà. Đồng thời, mỗi phòng có hệ thống hút mùi riêng. - Tiện ích trong phòng:  + Full nội thất: máylạnh, giường rộng, tủ áo quần lớn, bàn trang điểm riêng, tủ lạnh, máy giặt, bếpnấu ăn.  + Một số phụ kiện hỗtrợ: TRANH TREO TƯỜNG, NỆM LỚN, ÊM, ga trải giường, CÂY XANH TRONG PHÒNG- Tiện ích khu trọ: + Wifi cực mạnh, gói64Mbs + Mát giặt chung, chỗphơi áo quần chung ở sân thượng, giữ xe chung, ở ngay tầng trệt của nhà. + CỰC KỲ AN NINH:khóa vân tay, camera an ninh 24/24. Ra vào cửa sẽ chụp hình và report email.- Tiện ích xung quanh khu trọ: + Giao thông vận tải:khu vực trung tâm, đường lớn, 2 ô tô quay đầu, đến sân bay 5p, ra công viên 1p,đi lại các quận Phú Nhuận 5p, Quận 1, Q.3, Q.10, Q.Gò Vấp 10p. + Nghỉ dưỡng: đối diệnnhà là công viên, rất thoáng và mát, khu vực DÂN TRÍ CAO, cực kỳ YÊN TĨNH AN NINH + Vui chơi giải trí:bán kính 100m có: siêu thị lớn, rạp chiếu phim, trường cấp 2, cấp 3. + Ăn uống, sinh hoạt:cách 50m có rất nhiều quán ăn, quán nước, quán caffee. Cách 100m có chợ HoàngHoa Thám. *Số lượng có hạn: chỉ 3 phòng.Liên hệ để đặt ngay: 0901 474 204 (Phú Quý)</detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>PHONG_TOT</website>
+    </house>
+    <house>
+        <id>883</id>
+        <title>Chdv Bình Thạnh cần cho thuê</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/chdv-binh-thanh-can-cho-thue-1668549</linkNew>
+        <timePost>2020-03-20</timePost>
+        <img>https://thuenhatro360.com/u/i/aFS6K5ri.jpg</img>
+        <rentAddress>135 Nguyễn Cửu Vân, Phường 17, Bình Thạnh, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>6 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.796426</latitude>
+        <longitude>106.70559</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>882</id>
+        <title>Cho thuê phòng trọ giá tốt</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-tro-gia-tot-1668550</linkNew>
+        <timePost>2020-03-20</timePost>
+        <img>https://thuenhatro360.com/u/i/ccuOhYL4.jpg</img>
+        <rentAddress>327/64 Sư Vạn Hạnh, phường 9, quận 10</rentAddress>
+        <size>14 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 700 ngàn/ Tháng</rentPrice>
+        <detail>- Wifi miễn phí, máy giặt miễn phí, nước nóng năng lượng Thái Dương cho ai sợ lạnh. - Điện 3k5, nước 100k/người. </detail>
+        <latitude>10.758891</latitude>
+        <longitude>106.674355</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>910</id>
+        <title>Cho thuê căn hộ XI Grand Court</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-can-ho-xi-grand-court-1668519</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/erlhkGsF.jpg</img>
+        <rentAddress>Lý Thường Kiệt phường 14</rentAddress>
+        <size>80 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>24 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.771626</latitude>
+        <longitude>106.65787</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>909</id>
+        <title>Cho thuê phòng trọ mt phạm hữu lầu phường phú mỹ q</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-tro-mt-pham-huu-lau-phuong-phu-my-q-1668520</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/53ZiSExx.jpg</img>
+        <rentAddress>247 phạm hữu lầu phường phú mỹ quận 7</rentAddress>
+        <size>18 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>1 triệu 800 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.704105</latitude>
+        <longitude>106.729416</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>908</id>
+        <title>Cho thuê phòng trọ hẻm 2020đường huỳnh tấn phát th</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-tro-hem-2020duong-huynh-tan-phat-th-1668521</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/C7XAUeXH.jpg</img>
+        <rentAddress>Hẻm 2020 đường Huỳnh Tấn Phát thị trấn nhà bè</rentAddress>
+        <size>23 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 100 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.714354</latitude>
+        <longitude>106.737</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>907</id>
+        <title>Cho thuê phòng trọ hẻm 2020đường huỳnh tấn phát th</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-tro-hem-2020duong-huynh-tan-phat-th-1668522</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/rmVbGSik.jpg</img>
+        <rentAddress>Hẻm 2020 đường Huỳnh Tấn Phát thị trấn nhà bè</rentAddress>
+        <size>33 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 800 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.714354</latitude>
+        <longitude>106.737</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>906</id>
+        <title>Căn hộ mini có balcony ngay sân bay, Tân Bình</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-mini-co-balcony-ngay-san-bay-tan-binh-1668523</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/DgHlYicF.jpg</img>
+        <rentAddress>7F Bach Dang Street, Phường 2, Tân Bình, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>905</id>
+        <title>Phòng trọ D3 27m2 gần ĐH Ngoại Thương</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-tro-d3-27m2-gan-dh-ngoai-thuong-1668524</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/tRLZX3HO.jpg</img>
+        <rentAddress>43 D3, phường 25, Bình Thạnh</rentAddress>
+        <size>27 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>904</id>
+        <title>KTX D3, thuận tiện qua nhiều ĐH</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ktx-d3-thuan-tien-qua-nhieu-dh-1668525</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/8Xf0UWIw.jpg</img>
+        <rentAddress>43  D3 phường 25 Bình Thạnh</rentAddress>
+        <size>35 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>903</id>
+        <title>KTX Điện Biên Phủ, Bình Thạnh</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ktx-dien-bien-phu-binh-thanh-1668526</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/lYgSQmGx.jpg</img>
+        <rentAddress>264 Điện Biên Phủ, phường 17, Bình Thạnh, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>34 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.798987</latitude>
+        <longitude>106.70632</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>902</id>
+        <title>KTX Bạch Đằng, P2, Tân Bình</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ktx-bach-dang-p2-tan-binh-1668527</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/1qcqHQko.jpg</img>
+        <rentAddress>7f bạch đằng, phường 2, tân bình</rentAddress>
+        <size>27 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.7771</latitude>
+        <longitude>105.94453</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>901</id>
+        <title>KTX Nguyễn Thái Bình, Tân Bình</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ktx-nguyen-thai-binh-tan-binh-1668528</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/2yEW7kEI.jpg</img>
+        <rentAddress>25 nguyễn tháibình p4 tân bình</rentAddress>
+        <size>22 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.9419</latitude>
+        <longitude>106.75773</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>900</id>
+        <title>Phòng trọ cao cấp TÀI VƯỢNG cho thuê quận gò vấp</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-tro-cao-cap-tai-vuong-cho-thue-quan-go-vap-1668529</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/dnNXd0pu.jpg</img>
+        <rentAddress>206/32 Hẻm 150 Đường Trần Bá Giao, Quận Gò Vấp, Hồ Chí Minh</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 300 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.834714</latitude>
+        <longitude>106.69033</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>899</id>
+        <title>Căn hộ mini giá rẻ full nội thất_Y hình_Thuận tiện</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-mini-gia-re-full-noi-that-y-hinh-thuan-tien-1668530</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/pyViPrpl.jpg</img>
+        <rentAddress>Đường số 1 Bình Thuận Q7</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 800 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.739654</latitude>
+        <longitude>106.72658</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>898</id>
+        <title>Cho nữ thuê phòng trọ nhà mặt tiền quận 3</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-nu-thue-phong-tro-nha-mat-tien-quan-3-1668531</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img></img>
+        <rentAddress>288 Nam Kỳ Khởi Nghĩa, Phường 8, Quận 3, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>23 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 100 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.789135</latitude>
+        <longitude>106.68497</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>897</id>
+        <title>Căn hộ mini full nội thất giảm giá cực sốc</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-mini-full-noi-that-giam-gia-cuc-soc-1668532</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/zrcNp4m2.jpg</img>
+        <rentAddress>588 Huỳnh Tấn Phát</rentAddress>
+        <size>37 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.735393</latitude>
+        <longitude>106.7296</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>896</id>
+        <title>Căn hộ có gác gần Lotte_KDC yên tĩnh an ninh_Mới</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-co-gac-gan-lotte-kdc-yen-tinh-an-ninh-moi-1668533</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/8gtRqODr.jpg</img>
+        <rentAddress>Đường 42 Tân Quy</rentAddress>
+        <size>40 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.739129</latitude>
+        <longitude>106.712906</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>895</id>
+        <title>Căn hộ Gò Ô Môi_Mới và đẹp_Có cửa sổ_Ban công lớn</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-go-o-moi-moi-va-dep-co-cua-so-ban-cong-lon-1668534</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/t6gqhKxw.jpg</img>
+        <rentAddress>Gò Ô Môi, Phú Thuận</rentAddress>
+        <size>42 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu 300 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.730126</latitude>
+        <longitude>106.73799</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>894</id>
+        <title>Cho thuê phòng đầy đủ tiện nghi giờ giấc tự do.giá</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-day-du-tien-nghi-gio-giac-tu-dogia-1668535</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/yNCcsMY3.jpg</img>
+        <rentAddress>650/15 Hẻm 34 Trần Minh Quyền, Quận 10, Hồ Chí Minh</rentAddress>
+        <size>50 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.770422</latitude>
+        <longitude>106.675735</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>893</id>
+        <title>Cho thue phong gia re đay đu đủ tiện nghi</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-gia-re-day-du-du-tien-nghi-1668536</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/yDzsiEkb.jpg</img>
+        <rentAddress>650/15 Hẻm 34 Trần Minh Quyền, Quận 10, Hồ Chí Minh</rentAddress>
+        <size>50 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.770401</latitude>
+        <longitude>106.67575</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>892</id>
+        <title>Phong full nội thất 3.5tr Phan Van Tri giao PvD</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-full-noi-that-35tr-phan-van-tri-giao-pvd-1668537</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/ORp2hfrx.jpg</img>
+        <rentAddress>332 Phan Văn Trị, Phường 11, Bình Thạnh, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.819383</latitude>
+        <longitude>106.69464</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>891</id>
+        <title>Cho thuê phòng trọ giá rẻ tại Gò Vấp</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-tro-gia-re-tai-go-vap-1668539</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/MTYBpppo.jpg</img>
+        <rentAddress>251/15 Quang Trung</rentAddress>
+        <size>15 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>1 triệu 300 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.839428</latitude>
+        <longitude>106.647026</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>890</id>
+        <title>Căn hộ cho thuê gần ngã tư quang trung thống nhất</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-cho-thue-gan-nga-tu-quang-trung-thong-nhat-1668540</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/W9FyZj2D.jpg</img>
+        <rentAddress>579/3 Quang Trung, Phường 11, Gò Vấp, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>32 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.834343</latitude>
+        <longitude>106.66374</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>889</id>
+        <title>Phòng 35m2 full nội thất gần hàng xanh.</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-35m2-full-noi-that-gan-hang-xanh-1668541</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/s8FhK8Ei.jpg</img>
+        <rentAddress>Đường An Phú, Quận 2, Hồ Chí Minh</rentAddress>
+        <size>35 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 800 ngàn/ Tháng</rentPrice>
+        <detail>- Máy lạnh, máy nước nóng, máy giặt. </detail>
+        <latitude>10.80574</latitude>
+        <longitude>106.75242</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>888</id>
+        <title>CHO THUÊ CĂN HỘ GIÁ RẺ NGAY LOTTE Q7 0903703918</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-can-ho-gia-re-ngay-lotte-q7-0903703918-1668542</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/F1QVsUXe.jpg</img>
+        <rentAddress>Nguyễn thị thập</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.738715</latitude>
+        <longitude>106.711205</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>887</id>
+        <title>Cho Thuê Phòng Trong Nhà Nguyên Căn Q1 18m2.</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-trong-nha-nguyen-can-q1-18m2-1668543</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/jyQ8RZtJ.jpg</img>
+        <rentAddress>115/52A Trần Đình Xu</rentAddress>
+        <size>18 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.761633</latitude>
+        <longitude>106.687485</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>886</id>
+        <title>Căn hộ duplex chung cư full nội thất quận 7</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-duplex-chung-cu-full-noi-that-quan-7-1668544</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/JympU7NL.jpg</img>
+        <rentAddress>Hẻm 588 huỳnh tấn phát phường tân phú quận 7</rentAddress>
+        <size>20 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.735478</latitude>
+        <longitude>106.7298</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>885</id>
+        <title>Cho thuê căn hộ Quận 1, gần chợ Bến Thành</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-can-ho-quan-1-gan-cho-ben-thanh-1668545</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/3Xkq6X1Z.jpg</img>
+        <rentAddress>20 tầng 5, Lê Công Kiều (phố đồ cổ), phường Nguyễn Thái Bình</rentAddress>
+        <size>60 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>7 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.770405</latitude>
+        <longitude>106.700325</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>884</id>
+        <title>Căn hộ dịch vụ Bình Thạnh cần cho thuê</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-dich-vu-binh-thanh-can-cho-thue-1668546</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/kZAdIOui.jpg</img>
+        <rentAddress>135 Nguyễn Cửu Vân, Phường 17, Bình Thạnh, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>40 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>8 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.796426</latitude>
+        <longitude>106.70559</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>1013</id>
+        <title>Cho thuê phòng trọ khu cầu tó thanh trì</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-tro-khu-cau-to-thanh-tri-1668547</linkNew>
+        <timePost>2020-03-19</timePost>
+        <img>https://thuenhatro360.com/u/i/IVtMDepf.jpg</img>
+        <rentAddress>Cầu tó thanh tri</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>1 triệu 900 ngàn/ Tháng</rentPrice>
+        <detail>👉điện 3.5n 1 Số  .nc 50 k 1 ng. </detail>
+        <latitude>20.956148</latitude>
+        <longitude>105.80974</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>933</id>
+        <title>Cho Thuê Phòng Trọ Bình Thạnh Giá Rẻ</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-tro-binh-thanh-gia-re-1668481</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/IeFvVH8z.jpg</img>
+        <rentAddress>14/11 Phan Bội Châu</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>6 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.802762</latitude>
+        <longitude>106.70059</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>932</id>
+        <title>Căn hộ mini 2 phòng phú nhuận</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-mini-2-phong-phu-nhuan-1668482</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/UPnVrf61.jpg</img>
+        <rentAddress>98/5D Đ. Thích Quảng Đức, Phường 5, Phú Nhuận, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>45 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>7 triệu/ Tháng</rentPrice>
+        <detail>Khu dân cư cao cấp yên tĩnh văn minh. Có bếp riêng và WC riêng từng căn hộ. Có người vệ sinh 2 lần 1 tuần, đường truyền wifi tốc độ cao, khoá điện từ vân tay cao cấp và quan trọng bạn được hưởng mức điện ưu đãi giá rẻ tha hồ xài máy lạnh! Đảm bảo ở sg này không chỗ nào điện rẻ như chỗ mình. </detail>
+        <latitude>10.806309</latitude>
+        <longitude>106.6819</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>931</id>
+        <title>CÒN 1 PHÒNG DUY NHẤT (gt;50M2)**KHÔNG CHUNG CHỦ **</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/con-1-phong-duy-nhat-50m2khong-chung-chu-1668484</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/VhhWQLja.jpg</img>
+        <rentAddress>Hẻm 54 Đào Duy Anh, phường 9, Phú Nhuận, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>60 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>6 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.806956</latitude>
+        <longitude>106.67665</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>930</id>
+        <title>Phòng Cho Thuê Nội Thất Cao Cấp</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-cho-thue-noi-that-cao-cap-1668485</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/RD6k8z8F.jpg</img>
+        <rentAddress>359/53-55 Lê Văn Sĩ Phường 12 Quận 3</rentAddress>
+        <size>50 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>8 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail>+ Nhà còn mới, phong cách hiện đại, khu vực an ninh, xung quanh nhiều cửa hàng, quán xá, khu nhiều người nước ngoài. </detail>
+        <latitude>10.787316</latitude>
+        <longitude>106.675934</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>929</id>
+        <title>TÔI CHO THUÊ PHÒNG CÓ BAN CÔNG DT 25M-50M Q.PHÚ NHUẬN</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/toi-cho-thue-phong-co-ban-cong-dt-25m-50m-qphu-nhuan-1668486</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/QzKUkRAD.jpg</img>
+        <rentAddress>40</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>928</id>
+        <title>Cho nữ thuê phòng trọ nhà mặt tiền quận 3</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-nu-thue-phong-tro-nha-mat-tien-quan-3-1668487</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/Tn2as8X3.jpg</img>
+        <rentAddress>288B8 Đường Nam Kỳ Khởi Nghĩa, Quận 3, Hồ Chí Minh</rentAddress>
+        <size>23 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 100 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.789111</latitude>
+        <longitude>106.68475</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>927</id>
+        <title>Ký túc xá homestay quận 9</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ky-tuc-xa-homestay-quan-9-1668488</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/ewWu9L7U.jpg</img>
+        <rentAddress>293 đỗ xuân hợp phước long b</rentAddress>
+        <size>48 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>1 triệu 250 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.82824</latitude>
+        <longitude>106.77029</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>926</id>
+        <title>TRỌ DẠNG CĂN HỘ MINI - LINH ĐÔNG, THỦ ĐỨC</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/tro-dang-can-ho-mini-linh-dong-thu-duc-1668489</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/bFW15HuR.jpg</img>
+        <rentAddress>63/3c1 Đường số 36 Linh Đông Thủ Đức</rentAddress>
+        <size>17 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.837976</latitude>
+        <longitude>106.74447</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>925</id>
+        <title>CĂN HỘ MINI DÀNH CHO KHÁCH LÀM Ở Q2,Q1,Q7, Q9</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-mini-danh-cho-khach-lam-o-q2q1q7-q9-1668490</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/o0dWLOnn.jpg</img>
+        <rentAddress>910/5 Nguyễn Thị Định, Thạnh Mỹ Lợi, Quận 2</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu/ Tháng</rentPrice>
+        <detail>👉 Phòng #fullnộithất ( tivi, tủ lạnh, điều hòa, nước nóng, máy giặt, bếp, bàn ghế, tủ áo quần, giường, nệm, kệ giày) </detail>
+        <latitude>10.778216</latitude>
+        <longitude>106.76345</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>924</id>
+        <title>Mặt bằng kinh doanh 5x7m. Đường Điện Biên Phủ. Quận 10</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/mat-bang-kinh-doanh-5x7m-duong-dien-bien-phu-quan-10-1668491</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/J6iPt9UE.jpg</img>
+        <rentAddress>538 Điện Biên Phủ, phường 3, Quận 10, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>34 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>17 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.771964</latitude>
+        <longitude>106.678085</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>923</id>
+        <title>Cho Thuê Phòng quận Gò Vấp (Đọc phần mô tả)</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-quan-go-vap-doc-phan-mo-ta-1668492</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/UVEfc7A1.jpg</img>
+        <rentAddress>1388 Lê Đức Thọ, Phường 13, Gò Vấp, Hồ Chí Minh 700000, Việt Nam</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 300 ngàn/ Tháng</rentPrice>
+        <detail>+Điện: Tính theo giá nhà nước </detail>
+        <latitude>10.854896</latitude>
+        <longitude>106.65623</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>922</id>
+        <title>Cho Thuê Phòng Trong Nhà Nguyên Căn Q10 16m2.</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-trong-nha-nguyen-can-q10-16m2-1668493</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/in1M4eji.jpg</img>
+        <rentAddress>166/18 Hồ Bá Kiện</rentAddress>
+        <size>16 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 600 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.781128</latitude>
+        <longitude>106.669174</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>921</id>
+        <title>Nhà cho thuê chính chủ</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/nha-cho-thue-chinh-chu-1668494</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/sKPggvZ7.jpg</img>
+        <rentAddress>891/113/5 Hẻm 165 Đường Số 1, Quận Gò Vấp, Hồ Chí Minh</rentAddress>
+        <size>80 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>8 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.819569</latitude>
+        <longitude>106.67585</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>920</id>
+        <title>Phòng trọ giá rẻ Ngay siêu thị Big C Q7</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-tro-gia-re-ngay-sieu-thi-big-c-q7-1668496</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/CbxOVcbG.jpg</img>
+        <rentAddress>Nguyen thị thập</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.738715</latitude>
+        <longitude>106.711205</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>919</id>
+        <title>Cho Thuê Phòng Trong Nhà Nguyên Căn Q3 14m2.</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-trong-nha-nguyen-can-q3-14m2-1668497</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/4sPeunTd.jpg</img>
+        <rentAddress>46/13 Vườn Chuối</rentAddress>
+        <size>14 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 100 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.772313</latitude>
+        <longitude>106.683655</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>918</id>
+        <title>KÝ TÚC XÁ CAO CẤP - QUẬN GÒ VẤP - CHO NỮ</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ky-tuc-xa-cao-cap-quan-go-vap-cho-nu-1668498</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/fXmojnaa.jpg</img>
+        <rentAddress>Số 4, Đường số 7, KDC City Land Park Hill, Phường 7, Quận Gò Vấp, Tphcm</rentAddress>
+        <size>20 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>1 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail>- Tiền điện + tiền nước FREE - Phòng tắm nước nóng lạnh </detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>917</id>
+        <title>Phòng trọ full nội thất phú nhuận</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-tro-full-noi-that-phu-nhuan-1668499</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/m5xutuyE.jpg</img>
+        <rentAddress>41 Hoàng Diệu, Phường 10, Phú Nhuận, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>28 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>6 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.79572</latitude>
+        <longitude>106.67061</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>916</id>
+        <title>Full nội thất tại số 11 đ lâm văn bền Q7 4,8 tr</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/full-noi-that-tai-so-11-d-lam-van-ben-q7-48-tr-1668500</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/yiW1sqT8.jpg</img>
+        <rentAddress>Đường Lâm Văn Bền, Quận 7, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>24 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 800 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.748734</latitude>
+        <longitude>106.71586</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>915</id>
+        <title>Cho thuê phòng trọ quận Bình thạnh</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-tro-quan-binh-thanh-1668501</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/Tz0bjnTa.jpg</img>
+        <rentAddress>482/10/28/6 Nơ trang long, Phường 13</rentAddress>
+        <size>20 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.818926</latitude>
+        <longitude>106.70681</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>914</id>
+        <title>Cho thuê phòng full nội thất 270 thống nhất</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-full-noi-that-270-thong-nhat-1668503</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/PQhI8quW.jpg</img>
+        <rentAddress>270 Đường Thống Nhất, Phường 16, Gò Vấp, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.839395</latitude>
+        <longitude>106.665375</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>913</id>
+        <title>Căn hộ chung cư/ căn hộ Studio quận 7</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-chung-cu-can-ho-studio-quan-7-1668504</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/Vni9aE8r.jpg</img>
+        <rentAddress>đường 9M phường Tân Thuận Tây, quận 7</rentAddress>
+        <size>20 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu 200 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.749345</latitude>
+        <longitude>106.71684</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>912</id>
+        <title>Cho thue nha Nguyen can full noi that</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-nha-nguyen-can-full-noi-that-1668516</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img></img>
+        <rentAddress>23/44 Hẻm 23 Hòa Hưng, Quận 10, Hồ Chí Minh</rentAddress>
+        <size>65 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>15 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.779037</latitude>
+        <longitude>106.67578</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>911</id>
+        <title>Cho thue nha Nguyen Van full Noi that</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-nha-nguyen-van-full-noi-that-1668517</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/ifOgvKFa.jpg</img>
+        <rentAddress>23/44 Hẻm 23 Hòa Hưng, Quận 10, Hồ Chí Minh</rentAddress>
+        <size>65 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>15 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.7790785</latitude>
+        <longitude>106.67576</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>1014</id>
+        <title>Tìm bạn nữ ở ghép phòng sạch sẽ  (hàng tre)</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/tim-ban-nu-o-ghep-phong-sach-se-hang-tre-1668502</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/6UgbnVJr.jpg</img>
+        <rentAddress>44B Phố Hàng Vôi, Quận Hoàn Kiếm, Hà Nội</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu/ Tháng</rentPrice>
+        <detail>2tr/ tháng, bao điện nước bạn nhé </detail>
+        <latitude>21.031635</latitude>
+        <longitude>105.8556</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>1015</id>
+        <title>Cho thuê phòng khép kín</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-khep-kin-1668483</linkNew>
+        <timePost>2020-03-18</timePost>
+        <img>https://thuenhatro360.com/u/i/hGyqkMHC.jpg</img>
+        <rentAddress>Đại Mỗ, Nam Từ Liêm, Hà Nội</rentAddress>
+        <size>36 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>35 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>20.993406</latitude>
+        <longitude>105.7608</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>949</id>
+        <title>CĂN HỘ SIÊU ĐẸP 1PN Q1</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-sieu-dep-1pn-q1-1668463</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/T6NtRqF6.jpg</img>
+        <rentAddress>69 Đề Thám</rentAddress>
+        <size>60 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>10 triệu/ Tháng</rentPrice>
+        <detail>- Free wifi, free máy giặt, điện nước nhà nước có công tơ riêng. </detail>
+        <latitude>10.764084</latitude>
+        <longitude>106.69533</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>948</id>
+        <title>CĂN HỘ MỚI XÂY GIÁ RẺ Q5</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-moi-xay-gia-re-q5-1668464</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/a3pFNNgd.jpg</img>
+        <rentAddress>213/14 Nguyễn Trãi</rentAddress>
+        <size>20 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.758738</latitude>
+        <longitude>106.68151</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>947</id>
+        <title>Ký túc xá 750k gần Hồ Văn Huê. Phú Nhuận</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ky-tuc-xa-750k-gan-ho-van-hue-phu-nhuan-1668465</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/5NHWZU0m.jpg</img>
+        <rentAddress>621 Nguyễn Kiệm, phường 9, Phú Nhuận, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>37 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>750 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>946</id>
+        <title>Ký túc xá 700k máy lạnh Phú Nhuận, gần vòng xoay Nguyễn Thái Sơn</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ky-tuc-xa-700k-may-lanh-phu-nhuan-gan-vong-xoay-nguyen-thai-son-1668466</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/01WmGBFy.jpg</img>
+        <rentAddress>621 Nguyễn Kiệm, phường 9, Phú Nhuận, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>37 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>945</id>
+        <title>Ký túc xá đường Ngô Tất Tố Bình Thạnh, gần Thủ Thiêm</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ky-tuc-xa-duong-ngo-tat-to-binh-thanh-gan-thu-thiem-1668467</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/lk2fYHat.jpg</img>
+        <rentAddress>207 Ngô tất tố, phường 22, Bình Thạnh</rentAddress>
+        <size>36 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>944</id>
+        <title>Phòng trọ ngay sân bay, Tân Bình</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-tro-ngay-san-bay-tan-binh-1668468</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/bKoEDPBG.jpg</img>
+        <rentAddress>7F Đường Bạch Đằng, Phường 2, Tân Bình, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>5 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>943</id>
+        <title>Phòng trọ D3 27m2 gần ĐH Ngoại Thương</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-tro-d3-27m2-gan-dh-ngoai-thuong-1668469</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/IAYGPTXU.jpg</img>
+        <rentAddress>43 Đường D3, Phường 25, Bình Thạnh, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>4 triệu 200 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>942</id>
+        <title>KTX D3, thuận tiện qua nhiều ĐH</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ktx-d3-thuan-tien-qua-nhieu-dh-1668470</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/fefcPiiM.jpg</img>
+        <rentAddress>43 D3 phường 25 bình thạnh</rentAddress>
+        <size>35 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>941</id>
+        <title>KTX Điện Biên Phủ, Bình Thạnh</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/ktx-dien-bien-phu-binh-thanh-1668471</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/6jS14Bvq.jpg</img>
+        <rentAddress>264 Điện Biên Phủ, phường 17, Bình Thạnh, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>34 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>700 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>0.0</latitude>
+        <longitude>0.0</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>940</id>
+        <title>Phòng trọ số 1 phạm văn bạch sạch sẽ an ninh tốt</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/phong-tro-so-1-pham-van-bach-sach-se-an-ninh-tot-1668472</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/0sxe4DJH.jpg</img>
+        <rentAddress>83 Phạm Văn Bạch, Phường 15, Tân Bình, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 900 ngàn/ Tháng</rentPrice>
+        <detail>- điện 3500/kw - nước 80/ng ( xài tẹt tèn ten ) </detail>
+        <latitude>10.815369</latitude>
+        <longitude>106.63464</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>939</id>
+        <title>Cho Thuê Phòng Trong Căn Hộ Hoàng Anh An Tiến 3tr1</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-trong-can-ho-hoang-anh-an-tien-3tr1-1668473</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/CMwcN9na.jpg</img>
+        <rentAddress>187A Lê Văn Lương</rentAddress>
+        <size>18 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 100 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.709733</latitude>
+        <longitude>106.70235</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>938</id>
+        <title>Căn Hộ mini Tân Bình</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/can-ho-mini-tan-binh-1668476</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/3nh26nrP.jpg</img>
+        <rentAddress>Tống Văn Hên, Tân Bình, Hồ Chí Minh, Việt Nam</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 300 ngàn/ Tháng</rentPrice>
+        <detail>- Máy nước nóng - Có đội hỗ trợ khắc phục sự cố điện, nước ngay khi có yêu cầu. </detail>
+        <latitude>10.821497</latitude>
+        <longitude>106.63156</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>937</id>
+        <title>NC Mini Độc Lập ở 6 người - 4 xe 2tr2</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/nc-mini-doc-lap-o-6-nguoi-4-xe-2tr2-1668477</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/db0KJFOJ.jpg</img>
+        <rentAddress>A158, Lê Đức Thọ, P6, Q.Gò Vấp</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 200 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.835963</latitude>
+        <longitude>106.68135</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>936</id>
+        <title>NC Mini Độc Lập ở 6 người - 4 xe 2tr2</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/nc-mini-doc-lap-o-6-nguoi-4-xe-2tr2-1668478</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/wHyVZ3Nc.jpg</img>
+        <rentAddress>A158, Lê Đức Thọ, P6, Q.Tân Bình</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>2 triệu 200 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.837411</latitude>
+        <longitude>106.68064</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>935</id>
+        <title>Cho thuê căn hộ full nội thất cao cấp</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-can-ho-full-noi-that-cao-cap-1668479</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/Vj6tKNld.jpg</img>
+        <rentAddress>Đường Số 9A, Bình Chánh, Hồ Chí Minh</rentAddress>
+        <size>50 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>8 triệu 500 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.736395</latitude>
+        <longitude>106.689514</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>934</id>
+        <title>Cho Thuê Phòng Trong Nhà Nguyên Căn Q1 14 và 30m2.</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/cho-thue-phong-trong-nha-nguyen-can-q1-14-va-30m2-1668480</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/m8OIKQ8G.jpg</img>
+        <rentAddress>TK26/27 Nguyễn Cảnh Chân</rentAddress>
+        <size>30 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu 100 ngàn/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>10.758144</latitude>
+        <longitude>106.68832</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+    <house>
+        <id>1016</id>
+        <title>Còn một phòng duy nhất</title>
+        <linkNew>https://thuenhatro360.com/tin-dang/con-mot-phong-duy-nhat-1668475</linkNew>
+        <timePost>2020-03-17</timePost>
+        <img>https://thuenhatro360.com/u/i/RKgyiIlM.jpg</img>
+        <rentAddress>Số 143, Phan Đình Giót</rentAddress>
+        <size>25 m2</size>
+        <electricPrice></electricPrice>
+        <waterPrice></waterPrice>
+        <rentPrice>3 triệu/ Tháng</rentPrice>
+        <detail></detail>
+        <latitude>20.966944</latitude>
+        <longitude>105.76578</longitude>
+        <website>THUE_NHA_TRO_360</website>
+    </house>
+</houses>
