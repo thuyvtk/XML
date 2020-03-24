@@ -213,3 +213,120 @@ function create_address_infos(address) {
     document.getElementById("latitude_param").value = address.geometry.location.lat();
     document.getElementById("longitude_param").value = address.geometry.location.lng();
 }
+
+var regObj;
+var xmlDOM = new ActiveXObject("Microsoft.XMLDOM");
+function searchProcess() {
+    if (!regObj) {
+        return false;
+    }
+
+    if (regObj) {
+        xmlDOM.async = false;
+        xmlDOM.loadXML(regObj);
+        var list = document.getElementById("listHouse");
+
+        if (xmlDOM.parseError.errorCode != 0) {
+            alert("error :" + xmlDoc.parseError.reason);
+        } else {
+            //delete screen
+            while (list.hasChildNodes()) {
+                list.removeChild(list.firstChild);
+            }
+            //find node
+            var search = document.getElementById("search_bar");
+            var searchValue = search.value;
+            if (searchValue.trim() !== "") {
+                searchNode2(xmlDOM, searchValue);
+                //search server
+                if (!list.hasChildNodes()) {
+                    var hiddenSearch = document.getElementById("searchValue");
+                    hiddenSearch.value = searchValue;
+                    document.getElementById("searchServerForm").submit();
+                }
+            }
+        }
+    }
+}
+function searchNode2(node, strSearch) {
+    if (node == null) {
+        return;
+    }
+    if (node.tagName == "rentAddress") {
+        var tmp = node.firstChild.nodeValue;
+        var search = strSearch.trim().toLowerCase();
+        if (tmp.toLowerCase().indexOf(search, 0) > -1) {
+            // create view
+            var divListHouse = document.getElementById('listHouse');
+            var top_item = document.createElement("div");
+            top_item.setAttribute("class", "top-item");
+            divListHouse.appendChild(top_item);
+            var item = document.createElement("div");
+            item.setAttribute("class", "item");
+            top_item.appendChild(item);
+            var image_box = document.createElement("div");
+            image_box.setAttribute("class", "image-box");
+            item.appendChild(image_box);
+
+            var item_price = document.createElement("div");
+            item_price.setAttribute("class", "item-price");
+            item.appendChild(item_price);
+
+            var action = document.createElement("div");
+            action.setAttribute("class", "action");
+            item.appendChild(action);
+
+            var browser = document.createElement("a");
+            browser.setAttribute("target", "_blank");
+            action.appendChild(browser);
+
+            var button_link = document.createElement("input");
+            button_link.setAttribute("type", "submit");
+            button_link.setAttribute("value", "website");
+            button_link.setAttribute("name", "action");
+            button_link.setAttribute("class", "btnBrowse");
+            browser.appendChild(button_link);
+
+            var love_btn = document.createElement("input");
+            love_btn.setAttribute("type", "submit");
+            love_btn.setAttribute("value", "love");
+            love_btn.setAttribute("name", "action");
+            love_btn.setAttribute("class", "love");
+            action.appendChild(love_btn);
+
+            //create image tag
+            var imgTag = document.createElement("img");
+            imgTag.setAttribute("class", "image-box");
+            image_box.appendChild(imgTag);
+            var image = findNodeValue(node, "img", true);
+            imgTag.setAttribute("src", image);
+//            // create rentprice
+            var rentPrice = findNodeValue(node, "rentPrice", false);
+            item_price.innerHTML = rentPrice;
+
+            var browser_link = findNodeValue(node, "linkNew", true);
+            browser.setAttribute("href", browser_link);
+        }
+    }
+    var childs = node.childNodes;
+    for (var i = 0; i < childs.length; i++) {
+        searchNode2(childs[i], strSearch);
+    }
+}
+
+function findNodeValue(node, name, isPrevious) {
+    if (isPrevious) {
+        while (node.tagName != name) {
+            var node = node.previousSibling;
+        }
+    } else {
+        while (node.tagName != name) {
+            var node = node.nextSibling;
+        }
+    }
+    if (node.firstChild !== null) {
+        return node.firstChild.nodeValue;
+    } else {
+        return "";
+    }
+}

@@ -5,7 +5,11 @@
  */
 package thuyvtk.utilities;
 
+import java.io.StringWriter;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
 import thuyvtk.dto.BonusDTO;
+import thuyvtk.jaxbObject.ListHouse;
 
 /**
  *
@@ -33,5 +37,18 @@ public class Utilites {
         }
         return bonus;
     }
+ public static String marshallToString(ListHouse houses) {
+        try {
+            JAXBContext context = JAXBContext.newInstance(ListHouse.class);
+            Marshaller mar = context.createMarshaller();
+//            mar.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+            StringWriter sw = new StringWriter();
+            mar.marshal(houses, sw);
 
+            return sw.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
