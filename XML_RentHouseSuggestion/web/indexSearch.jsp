@@ -22,7 +22,7 @@
     </head>
     <body onload="return displaySearchOptionSpace()">
         <script>
-                    regObj = '${requestScope.INFO}';
+            regObj = '${requestScope.INFO}';
         </script>
         <!--        header-->
         <div class="header_container">
@@ -39,7 +39,10 @@
         <!--search space-->
         <div class="search_container" id="search_container">
             <div id="search_space">
-                <input id="search_like" class="controls" type="text" name="txtSearchValue" placeholder="Tìm theo khu vực, địa điểm..." />
+                <form action="ProcessServlet">
+                    <input id="search_like" class="controls" type="text" name="txtSearchValue" placeholder="Tìm theo khu vực, địa điểm..." />
+                    <input type="submit" value="Search " name="action" id="btn_SearchLike"  onclick="return searchProcess();"/>
+                </form>
                 <form action="ProcessServlet">
                     <input type="submit" value="Search" name="action" id="btn_Search"  onclick="checkNull()"/>
                     <input type="hidden" name="latitude" value="" id="latitude_param" />

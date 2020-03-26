@@ -11,6 +11,8 @@ function displaySearchOptionSpace() {
         document.getElementById("div-optional").style.visibility = 'visible';
         document.getElementById("search_like").style.visibility = 'hidden';
         document.getElementById("label-optional").style.visibility = 'visible';
+        document.getElementById("btn_SearchLike").style.visibility = 'hidden';
+        document.getElementById("btn_Search").style.visibility = 'visible';
         btnMoreOption.style.background = "url('css/icon_doubleup.png') no-repeat right";
         document.getElementById("search-way").value = 'searchByLocation';
 
@@ -21,6 +23,8 @@ function displaySearchOptionSpace() {
         document.getElementById("div-optional").style.visibility = 'hidden';
         document.getElementById("search_like").style.visibility = 'visible';
         document.getElementById("label-optional").style.visibility = 'hidden';
+        document.getElementById("btn_SearchLike").style.visibility = 'visible';
+                document.getElementById("btn_Search").style.visibility = 'hidden';
         btnMoreOption.style.background = "url('css/icon_doubledown.png') no-repeat right";
         document.getElementById("search-way").value = 'searchLike';
     }
@@ -255,7 +259,7 @@ function searchProcess() {
                 list.removeChild(list.firstChild);
             }
             //find node
-            var search = document.getElementById("search_bar");
+            var search = document.getElementById("search_like");
             var searchValue = search.value;
             if (searchValue.trim() !== "") {
                 searchNode2(xmlDOM, searchValue);

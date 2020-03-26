@@ -52,81 +52,62 @@ public class SearchServlet extends HttpServlet {
         String url = INDEX_PAGE;
         try {
 
-            String searchWay = request.getParameter("searchWay");
+            String latitude = request.getParameter("latitude");
+            String longitude = request.getParameter("longitude");
 
-            if (searchWay.equals("searchLike")) {
-                HouseDAO dao = new HouseDAO();
-                String searchValue = request.getParameter("txtSearchValue");
-                ListHouse searchedList;
-                if (searchValue != null) {
-                    searchedList = dao.searchLikeAddress(searchValue);
-                    request.setAttribute("LISTHOUSE", searchedList.getHouse());
-                }
-                // get top 100 house by time desc       
-                ListHouse houses = dao.findLasted100House();
-                String str = Utilites.marshallToString(houses);
-                request.setAttribute("INFO", str);
-            }
-
-            if (searchWay.equals("searchByLocation")) {
-                String latitude = request.getParameter("latitude");
-                String longitude = request.getParameter("longitude");
-
-                if (!latitude.isEmpty() && !longitude.isEmpty()) {
-                    int distance = Integer.parseInt(request.getParameter("dropdownDistance"));
-                    String cbSize = request.getParameter("cbSize");
-                    boolean checkSize = false;
-                    if (cbSize != null && cbSize.equals("true")) {
-                        checkSize = true;
-                    }
-
-                    BonusDTO requireBonus = new BonusDTO(false, false, false, false, false);
-                    String cbFridge = request.getParameter("cbFridge");
-                    if (cbFridge != null && cbFridge.equals("ON")) {
-                        requireBonus.setFridge(true);
-                    }
-                    String cbAir = request.getParameter("cbAir");
-                    if (cbAir != null & cbAir.equals("ON")) {
-                        requireBonus.setAir_conditioner(true);
-                    }
-                    String cbWashing = request.getParameter("cbWashing");
-                    if (cbWashing != null && cbWashing.equals("ON")) {
-                        requireBonus.setWashing(true);
-                    }
-                    String cbParking = request.getParameter("cbParking");
-                    if (cbParking != null && cbParking.equals("ON")) {
-                        requireBonus.setParking(true);
-                    }
-                    String cbShower = request.getParameter("cbShower");
-                    if (cbShower.equals("ON")) {
-                        requireBonus.setHeater(true);
-                    }
-                    HttpSession session = request.getSession();
-                    session.setAttribute("LATITUDE", latitude);
-                    session.setAttribute("LONGITUDE", longitude);
-                    HouseDAO houseDAO = new HouseDAO();
-                    houseDAO.findHouses(latitude, longitude, distance);
-
-                    float maxSize = houseDAO.getMaxSize();
-
-                    List<HouseDTO> listHouses = houseDAO.getListHouses();
-                    for (HouseDTO item : listHouses) {
-                        item.setRequestDistance(distance);
-                        item.setCheckSize(checkSize);
-                        item.setRequireBonus(requireBonus);
-                        item.setMaxSize(maxSize);
-                    }
-
-                    Collections.sort(listHouses);
-                    request.setAttribute("LIST_HOUSE", listHouses);
-                    session.setAttribute("LIST_HOUSE", listHouses);
-                    List<HouseItem> top4 = new ArrayList<>();
-                    for (int i = 0; i < 3; i++) {
-                        top4.add(listHouses.get(i));
-                    }
-                    request.setAttribute("TOP4", top4);
+            if (!latitude.isEmpty() && !longitude.isEmpty()) {
+                int distance = Integer.parseInt(request.getParameter("dropdownDistance"));
+                String cbSize = request.getParameter("cbSize");
+                boolean checkSize = false;
+                if (cbSize != null && cbSize.equals("true")) {
+                    checkSize = true;
                 }
 
+                BonusDTO requireBonus = new BonusDTO(false, false, false, false, false);
+                String cbFridge = request.getParameter("cbFridge");
+                if (cbFridge != null && cbFridge.equals("ON")) {
+                    requireBonus.setFridge(true);
+                }
+                String cbAir = request.getParameter("cbAir");
+                if (cbAir != null & cbAir.equals("ON")) {
+                    requireBonus.setAir_conditioner(true);
+                }
+                String cbWashing = request.getParameter("cbWashing");
+                if (cbWashing != null && cbWashing.equals("ON")) {
+                    requireBonus.setWashing(true);
+                }
+                String cbParking = request.getParameter("cbParking");
+                if (cbParking != null && cbParking.equals("ON")) {
+                    requireBonus.setParking(true);
+                }
+                String cbShower = request.getParameter("cbShower");
+                if (cbShower.equals("ON")) {
+                    requireBonus.setHeater(true);
+                }
+                HttpSession session = request.getSession();
+                session.setAttribute("LATITUDE", latitude);
+                session.setAttribute("LONGITUDE", longitude);
+                HouseDAO houseDAO = new HouseDAO();
+                houseDAO.findHouses(latitude, longitude, distance);
+
+                float maxSize = houseDAO.getMaxSize();
+
+                List<HouseDTO> listHouses = houseDAO.getListHouses();
+                for (HouseDTO item : listHouses) {
+                    item.setRequestDistance(distance);
+                    item.setCheckSize(checkSize);
+                    item.setRequireBonus(requireBonus);
+                    item.setMaxSize(maxSize);
+                }
+
+                Collections.sort(listHouses);
+                request.setAttribute("LIST_HOUSE", listHouses);
+                session.setAttribute("LIST_HOUSE", listHouses);
+                List<HouseItem> top4 = new ArrayList<>();
+                for (int i = 0; i < 3; i++) {
+                    top4.add(listHouses.get(i));
+                }
+                request.setAttribute("TOP4", top4);
             }
 
         } catch (ClassNotFoundException ex) {

@@ -66,6 +66,9 @@ public class ProcessServlet extends HttpServlet {
                     case "Search":
                         url = SEARCH_SERVLET;
                         break;
+                    case "Search ":
+                        url = SEARCH_CLIENT_SERVLET;
+                        break;
                     case "Đăng nhập vào tài khoản của bạn":
                         url = LOGIN_SERVLET;
                         break;

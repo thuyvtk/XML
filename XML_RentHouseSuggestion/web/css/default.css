@@ -173,7 +173,27 @@
     cursor: pointer;
     float: right;
     margin-right: 100px;
+    margin-top: -45px;
+}
+#btn_SearchLike{
+    width: 130px;
+    height: 45px;
+    background: url("icon_search.png") no-repeat black left;
+    background-size: 30px 30px;
+    padding-left: 10px;
+    left: 40px;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: initial;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 100px;
     margin-top: 50px;
+    visibility: hidden;
 }
 /*#map {
     height: 1px;
