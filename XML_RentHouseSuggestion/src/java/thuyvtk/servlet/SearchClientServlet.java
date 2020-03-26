@@ -37,7 +37,7 @@ public class SearchClientServlet extends HttpServlet {
         String url = INDEX_PAGE;
         try {
             HouseDAO dao = new HouseDAO();
-            String searchValue = request.getParameter("searchValue");
+            String searchValue = request.getParameter("txtSearchValue");
             ListHouse searchedList;
             if (searchValue != null) {
                 searchedList = dao.searchLikeAddress(searchValue);

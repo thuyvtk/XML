@@ -39,9 +39,9 @@
         <!--search space-->
         <div class="search_container" id="search_container">
             <div id="search_space">
-                <form action="ProcessServlet">
+                <form action="ProcessServlet" id="searchServerForm">
                     <input id="search_like" class="controls" type="text" name="txtSearchValue" placeholder="Tìm theo khu vực, địa điểm..." />
-                    <input type="submit" value="Search " name="action" id="btn_SearchLike"  onclick="return searchProcess();"/>
+                    <input type="button" value="Search " name="action" id="btn_SearchLike"  onclick="return searchProcess();"/>
                 </form>
                 <form action="ProcessServlet">
                     <input type="submit" value="Search" name="action" id="btn_Search"  onclick="checkNull()"/>
@@ -106,6 +106,30 @@
 
             </div>
         </div>
+        <div  class="result-item">
+            <div class="top-4item" id="listHouse">
+                <c:set var='listHouse' value="${requestScope.LISTHOUSE}"/>
+                <c:if test="${not empty listHouse}">
+                    <c:forEach var="top" items="${listHouse}">
+                        <div class="top-item">
+                            <div class="item">
+                                <div class="image-box">
+                                    <img class="item-img" src=${top.img}/> 
+                                </div>
+                                <div class="item-price">${top.rentPrice}<br/>
+
+                                </div>
+                                <div class="action">
+                                    <a href=${top.linkNew} target="_blank"><input type="submit" value="Website" name="action" class="btnBrowse"/></a>
+                                    <input type="submit" value="love" name="action" class="love"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </c:forEach>
+                </c:if>
+            </div>
+        </div>               
 
         <c:set var='result' value="${requestScope.LIST_HOUSE}"/>
         <c:if test="${not empty result}">

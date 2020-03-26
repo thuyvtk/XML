@@ -24,7 +24,7 @@ function displaySearchOptionSpace() {
         document.getElementById("search_like").style.visibility = 'visible';
         document.getElementById("label-optional").style.visibility = 'hidden';
         document.getElementById("btn_SearchLike").style.visibility = 'visible';
-                document.getElementById("btn_Search").style.visibility = 'hidden';
+        document.getElementById("btn_Search").style.visibility = 'hidden';
         btnMoreOption.style.background = "url('css/icon_doubledown.png') no-repeat right";
         document.getElementById("search-way").value = 'searchLike';
     }
@@ -240,20 +240,24 @@ function create_address_infos(address) {
 }
 
 var regObj;
-var xmlDOM = new ActiveXObject("Microsoft.XMLDOM");
+var xmlDOM = null;
 function searchProcess() {
     if (!regObj) {
         return false;
     }
 
     if (regObj) {
-        xmlDOM.async = false;
-        xmlDOM.loadXML(regObj);
+//        xmlDom = document.implementation.createDocument()
+//        xmlDOM.async = false;
+//        xmlDOM.loadXML(regObj);
+
+        var parser = new DOMParser();
+        xmlDOM = parser.parseFromString(regObj, "text/xml");
         var list = document.getElementById("listHouse");
 
-        if (xmlDOM.parseError.errorCode != 0) {
-            alert("error :" + xmlDoc.parseError.reason);
-        } else {
+//        if (xmlDOM.parseError.errorCode != 0) {
+//            alert("error :" + xmlDoc.parseError.reason);
+//        } else {
             //delete screen
             while (list.hasChildNodes()) {
                 list.removeChild(list.firstChild);
@@ -265,12 +269,12 @@ function searchProcess() {
                 searchNode2(xmlDOM, searchValue);
                 //search server
                 if (!list.hasChildNodes()) {
-                    var hiddenSearch = document.getElementById("searchValue");
+                    var hiddenSearch = document.getElementById("search_like");
                     hiddenSearch.value = searchValue;
                     document.getElementById("searchServerForm").submit();
                 }
             }
-        }
+     //   }
     }
 }
 function searchNode2(node, strSearch) {
