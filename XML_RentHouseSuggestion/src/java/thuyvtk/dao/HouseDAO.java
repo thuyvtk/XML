@@ -34,7 +34,7 @@ public class HouseDAO implements Serializable {
     public List<HouseDTO> getListHouses() {
         return listHouses;
     }
-    
+
     Utilites helper = new Utilites();
 
     public int insertHouse(HouseItem dto) throws SQLException, NamingException {
@@ -195,7 +195,7 @@ public class HouseDAO implements Serializable {
         try {
             con = DBConnection.makeConnection();
             if (con != null) {
-                
+
                 String sql = "SELECT *  FROM (select id,title,linkNew,timePost,img,rentAddress,size,electricPrice,waterPrice,rentPrice,detail,latitude,longitude,webId,( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) + sin( radians(?) ) * sin( radians( latitude ) ) ) ) as 'distance', (select Top 1 ( 6371 * acos( cos( radians(h.latitude) ) * cos( radians( m.latitude ) ) * cos( radians( m.longitude ) - radians(h.longitude) ) + sin( radians(h.latitude) ) * sin( radians( m.latitude ) ) ) ) as 'distance' FROM tblMarket m WHERE ( 6371 * acos( cos( radians(h.latitude) ) * cos( radians( m.latitude ) ) * cos( radians( m.longitude ) - radians(h.longitude) ) + sin( radians(h.latitude) ) * sin( radians( m.latitude ) ) ) ) < 10 order by distance) as market FROM tblHouse h WHERE ( 6371 * acos( cos( radians(?) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(?) ) + sin( radians(?) ) * sin( radians( latitude ) ) ) ) < ?) H JOIN tblHouse_Bonus B ON H.id  = B.houseId order by distance";
                 stm = con.prepareStatement(sql);
                 stm.setFloat(1, Float.parseFloat(latitude));
@@ -231,14 +231,14 @@ public class HouseDAO implements Serializable {
                         houseItem.setWebsite(rs.getString("webId"));
                         houseItem.setDistance(rs.getFloat("distance"));
                         houseItem.setMarketDistance(rs.getFloat("market"));
-                        
+
                         BonusDTO bonus = new BonusDTO();
                         bonus = helper.setBonus(bonus, rs.getInt("bonusId"));
                         houseItem.setBonusDTO(bonus);
-                        
+
                         checkList.add(id);
                         listHouses.add(houseItem);
-                        
+
                     } else {
                         houseItem = listHouses.get(checkList.indexOf(id));
                         BonusDTO bonus = houseItem.getBonusDTO();
@@ -294,7 +294,7 @@ public class HouseDAO implements Serializable {
         }
         return false;
     }
-    
+
     public ListHouse findLasted100House() throws ClassNotFoundException, SQLException, NamingException {
         ListHouse houses = new ListHouse();
         ArrayList<HouseItem> listHouse = (ArrayList<HouseItem>) houses.getHouse();
@@ -309,22 +309,22 @@ public class HouseDAO implements Serializable {
                 rs = stm.executeQuery();
                 while (rs.next()) {
                     HouseItem houseItem = new HouseItem();
-                    int id = rs.getInt("id"); 
-                        houseItem.setId(BigInteger.valueOf(id));
-                        houseItem.setTitle(rs.getString("title"));
-                        houseItem.setLinkNew(rs.getString("linkNew"));
-                        houseItem.setTimePost(rs.getDate("timePost") + "");
-                        houseItem.setImg(rs.getString("img"));
-                        houseItem.setRentAddress(rs.getString("rentAddress"));
-                        houseItem.setSize(rs.getString("size"));
-                        houseItem.setElectricPrice(rs.getString("electricPrice"));
-                        houseItem.setWaterPrice(rs.getString("waterPrice"));
-                        houseItem.setRentPrice(rs.getString("rentPrice"));
-                        houseItem.setDetail(rs.getString("detail"));
-                        houseItem.setLatitude(rs.getFloat("latitude") + "");
-                        houseItem.setLongitude(rs.getFloat("longitude") + "");
-                        houseItem.setWebsite(rs.getString("webId"));
-                        listHouse.add(houseItem); 
+                    int id = rs.getInt("id");
+                    houseItem.setId(BigInteger.valueOf(id));
+                    houseItem.setTitle(rs.getString("title"));
+                    houseItem.setLinkNew(rs.getString("linkNew"));
+                    houseItem.setTimePost(rs.getDate("timePost") + "");
+                    houseItem.setImg(rs.getString("img"));
+                    houseItem.setRentAddress(rs.getString("rentAddress"));
+                    houseItem.setSize(rs.getString("size"));
+                    houseItem.setElectricPrice(rs.getString("electricPrice"));
+                    houseItem.setWaterPrice(rs.getString("waterPrice"));
+                    houseItem.setRentPrice(rs.getString("rentPrice"));
+                    houseItem.setDetail(rs.getString("detail"));
+                    houseItem.setLatitude(rs.getFloat("latitude") + "");
+                    houseItem.setLongitude(rs.getFloat("longitude") + "");
+                    houseItem.setWebsite(rs.getString("webId"));
+                    listHouse.add(houseItem);
                 }
             }
         } finally {
@@ -340,7 +340,7 @@ public class HouseDAO implements Serializable {
         }
         return houses;
     }
-    
+
     public ListHouse searchLikeAddress(String searchValue) throws ClassNotFoundException, SQLException, NamingException {
         ListHouse houses = new ListHouse();
         ArrayList<HouseItem> listHouse = (ArrayList<HouseItem>) houses.getHouse();
@@ -353,26 +353,26 @@ public class HouseDAO implements Serializable {
                 String sql = "select TOP 100 id,title,linkNew,timePost,img,rentAddress,size,electricPrice,waterPrice,rentPrice,detail,latitude,longitude,webId FROM tblHouse "
                         + "Where rentAddress like ? order by timePost DESC";
                 stm = con.prepareStatement(sql);
-                stm.setString(1, "%"+ searchValue + "%");
+                stm.setString(1, "%" + searchValue + "%");
                 rs = stm.executeQuery();
                 while (rs.next()) {
                     HouseItem houseItem = new HouseItem();
-                    int id = rs.getInt("id"); 
-                        houseItem.setId(BigInteger.valueOf(id));
-                        houseItem.setTitle(rs.getString("title"));
-                        houseItem.setLinkNew(rs.getString("linkNew"));
-                        houseItem.setTimePost(rs.getDate("timePost") + "");
-                        houseItem.setImg(rs.getString("img"));
-                        houseItem.setRentAddress(rs.getString("rentAddress"));
-                        houseItem.setSize(rs.getString("size"));
-                        houseItem.setElectricPrice(rs.getString("electricPrice"));
-                        houseItem.setWaterPrice(rs.getString("waterPrice"));
-                        houseItem.setRentPrice(rs.getString("rentPrice"));
-                        houseItem.setDetail(rs.getString("detail"));
-                        houseItem.setLatitude(rs.getFloat("latitude") + "");
-                        houseItem.setLongitude(rs.getFloat("longitude") + "");
-                        houseItem.setWebsite(rs.getString("webId"));
-                        listHouse.add(houseItem); 
+                    int id = rs.getInt("id");
+                    houseItem.setId(BigInteger.valueOf(id));
+                    houseItem.setTitle(rs.getString("title"));
+                    houseItem.setLinkNew(rs.getString("linkNew"));
+                    houseItem.setTimePost(rs.getDate("timePost") + "");
+                    houseItem.setImg(rs.getString("img"));
+                    houseItem.setRentAddress(rs.getString("rentAddress"));
+                    houseItem.setSize(rs.getString("size"));
+                    houseItem.setElectricPrice(rs.getString("electricPrice"));
+                    houseItem.setWaterPrice(rs.getString("waterPrice"));
+                    houseItem.setRentPrice(rs.getString("rentPrice"));
+                    houseItem.setDetail(rs.getString("detail"));
+                    houseItem.setLatitude(rs.getFloat("latitude") + "");
+                    houseItem.setLongitude(rs.getFloat("longitude") + "");
+                    houseItem.setWebsite(rs.getString("webId"));
+                    listHouse.add(houseItem);
                 }
             }
         } finally {
@@ -387,6 +387,36 @@ public class HouseDAO implements Serializable {
             }
         }
         return houses;
+    }
+
+    public float getMaxSize() throws ClassNotFoundException, SQLException, NamingException {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            con = DBConnection.makeConnection();
+            if (con != null) {
+                String sql = "SELECT MAX(size) as 'MAXSIZE' FROM tblHouse";
+                stm = con.prepareStatement(sql);
+                rs = stm.executeQuery();
+                if (rs.next()) {
+                    String maxSize = rs.getString("MAXSIZE");
+                    maxSize = maxSize.replace("m2", "").replace("M2", "").replace("m", "").replace("M", "").trim();
+                    return Float.parseFloat(maxSize);
+                }
+            }
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (stm != null) {
+                stm.close();
+            }
+            if (con != null) {
+                con.close();
+            }
+        }
+        return 1;
     }
 
 }

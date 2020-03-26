@@ -5,14 +5,35 @@ function displaySearchOptionSpace() {
     var heightDiv = document.getElementById("search_space");
     var btnMoreOption = document.getElementById("btn_MoreOption");
     if (heightDiv.style.height === '40%') {
-        document.getElementById("search_space").style.height = '80%';
+        document.getElementById("search_container").style.height = '650px';
+        document.getElementById("search_space").style.height = '90%';
+        document.getElementById("div-optional").style.height = '350px';
+        document.getElementById("div-optional").style.visibility = 'visible';
+        document.getElementById("search_like").style.visibility = 'hidden';
+        document.getElementById("label-optional").style.visibility = 'visible';
         btnMoreOption.style.background = "url('css/icon_doubleup.png') no-repeat right";
+        document.getElementById("search-way").value = 'searchByLocation';
+
     } else {
+        document.getElementById("search_container").style.height = '580px';
         document.getElementById("search_space").style.height = '40%';
+        document.getElementById("div-optional").style.height = '0px';
+        document.getElementById("div-optional").style.visibility = 'hidden';
+        document.getElementById("search_like").style.visibility = 'visible';
+        document.getElementById("label-optional").style.visibility = 'hidden';
         btnMoreOption.style.background = "url('css/icon_doubledown.png') no-repeat right";
+        document.getElementById("search-way").value = 'searchLike';
     }
 }
 
+function checkNull() {
+    var searchValue = document.getElementById("search_bar").value;
+    if (searchValue.trim() === '') {
+        document.getElementById("latitude_param").value = '';
+        document.getElementById("longitude_param").value = '';
+    }
+
+}
 
 var map, marker, infowindow;
 var markers = [];

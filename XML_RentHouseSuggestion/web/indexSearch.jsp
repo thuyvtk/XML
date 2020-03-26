@@ -16,9 +16,14 @@
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
         <script type="text/javascript" src="js/default.js"></script>
     </head>
     <body onload="return displaySearchOptionSpace()">
+        <script>
+                    regObj = '${requestScope.INFO}';
+        </script>
         <!--        header-->
         <div class="header_container">
             <div class="logo" onclick="location.href = ''"></div>
@@ -27,20 +32,73 @@
             <form action="ProcessServlet" method="POST">
                 <input type="submit" value="View love list" name="action" class="love_list"/>
             </form>
-            
+
             <div class="login" onclick="location.href = 'loginPage.html'"></div>
         </div>
 
         <!--search space-->
-        <div class="search_container">
+        <div class="search_container" id="search_container">
             <div id="search_space">
-                <input id="search_bar" class="controls" type="text" name="txtSearchValue" placeholder="Tìm theo khu vực, địa điểm..." />
+                <input id="search_like" class="controls" type="text" name="txtSearchValue" placeholder="Tìm theo khu vực, địa điểm..." />
                 <form action="ProcessServlet">
-                    <input type="submit" value="Search" name="action" id="btn_Search"/>
+                    <input type="submit" value="Search" name="action" id="btn_Search"  onclick="checkNull()"/>
                     <input type="hidden" name="latitude" value="" id="latitude_param" />
                     <input type="hidden" name="longitude" value="" id="longitude_param" />
+                    <input type="hidden" name="searchWay" value="" id="search-way" />
+
+
+                    <br/>
+                    <div class="moreOptional" id="div-optional">
+                        <input id="search_bar" class="controls" type="text" name="txtSearchValue" placeholder="Bạn muốn thuê gần..."/>
+                        <div class="cb-distance">
+                            <span>Khoảng cách tối đa:</span>
+                            <select name="dropdownDistance">
+                                <option value="5">5 KM</option>
+                                <option value="3">3 KM</option>
+                                <option value="8">8 KM</option>
+                                <option value="10">10 KM</option>
+                                <option value="15">15 KM</option>
+                            </select>
+                        </div>
+                        <div class="prioritize">
+                            <span> Ưu tiên diện tích:</span>
+                            <input type="checkbox" name="cbSize" value="true" checked="checked"/>
+                        </div>
+                        <div class="prioritize-bonus">
+                            <span> Tiện ích:</span>
+                            <div class="search-bonus">
+                                <div class="bonus-search">
+                                    <input type="checkbox" name="cbFridge" value="ON" checked="checked" />
+                                    <img src="css/icons8_fridge_48.png"/><br/>
+                                    Tủ lạnh<br/>
+                                </div>
+                                <div class="bonus-search">
+                                    <input type="checkbox" name="cbAir" value="ON" checked="checked" />
+                                    <img src="css/icons8_air_conditioner.png"/><br/>
+                                    Điều hòa<br/>
+                                </div>
+                                <div class="bonus-search">
+                                    <input type="checkbox" name="cbWashing" value="ON" checked="checked" />
+                                    <img src="css/icons_washing_machine_1.png"/><br/>
+                                    Máy giặt<br/>
+                                </div>
+                            </div>
+                            <div class="search-bonus">
+                                <div class="bonus-search">
+                                    <input type="checkbox" name="cbParking" value="ON" checked="checked" />
+                                    <img src="css/icons_scooter_50.png"/><br/>
+                                    Đậu xe<br/>
+                                </div>
+                                <div class="bonus-search">
+                                    <input type="checkbox" name="cbShower" value="ON" checked="checked" />
+                                    <img src="css/icons8_safety_shower.png"/><br/>
+                                    Bình nóng lạnh<br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
-                <br/>
+                <span id="label-optional">Tất cả các tiêu chí vừa chọn sẽ được đánh giá cùng với giá thuê để đưa ra kết quả tốt nhất!</span>
                 <input id="btn_MoreOption" type="submit" value="Tùy chọn nâng cao" name="btnMoreOption" onclick="return displaySearchOptionSpace()"/>
 
             </div>
